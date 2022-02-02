@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="Keywords" content=""/>
+	<meta name="Description" content=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/layout.css" type="text/css"/>
+	<script src="js/jquery-1.9.0.min.js"></script>
+
+
+ <style>
+  div {
+    color: red;
+  }
+  </style>
+
+
+
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="styles/ie.css" type="text/css"/>
+<![endif]-->
+</head>
+<body>
+<select name="sweets" >
+  <option>none</option>
+  <option >Candy</option>
+  <option>Taffy</option>
+  <option >Caramel</option>
+  <option>Fudge</option>
+  <option>Cookie</option>
+</select>
+<div ></div>
+ 
+<script>
+$( "select" ).change(function () {
+    var str = "99";
+
+    $( "select option:selected" ).each(function() {
+      str += $( this ).text() + " ";
+    });
+
+    $( "div" ).text( str );
+  })
+  .change();
+</script>
+
+</body>
+</html>
