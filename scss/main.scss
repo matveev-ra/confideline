@@ -4,7 +4,7 @@
 @import "mixin"; 
 
 .Main {
-    max-width: 1920px;
+    max-width: 1170px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -13,7 +13,24 @@
 
 } 
 
-
+p {
+    margin-bottom: 30px;
+}
+ p.par1 {
+     @include font300(20px,22px);
+     color: #000;
+ }        
+ p.par2 {
+    @include font400(20px,22px);
+    color: #000;
+ }        
+ p.par3 {
+    @include font500(20px,22px);
+    color: #000;
+ }        
+ p.par4 {@include font800(20px,22px);
+    color: #000;
+}        
          
 
 
