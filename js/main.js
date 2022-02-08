@@ -1,4 +1,5 @@
 $(function () {
+    
     //прилипает меню к верху
     $(window).scroll(function () {
         var wScrTop = $(window).scrollTop()

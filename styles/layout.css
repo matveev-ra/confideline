@@ -597,12 +597,12 @@ header {
 #Block2 .ContWrapper {
   background: url("../images/baground2.jpg") center top no-repeat;
   width: 1226px;
-  height: 1252px;
+  height: 1232px;
   -webkit-box-shadow: 0 0 30px #f5f5f5;
   box-shadow: 0 0 30px #f5f5f5;
   position: relative;
   margin-top: 30px;
-  margin-bottom: 110px;
+  margin-bottom: 50px;
 }
 
 .img-hand-phone {
@@ -716,7 +716,7 @@ header {
 
 #Block3 {
   background: url("../images/baground3.jpg") center 236px no-repeat;
-  padding-bottom: 120px;
+  padding-bottom: 40px;
 }
 
 .Lang {
@@ -925,12 +925,16 @@ header {
   margin-bottom: 40px;
 }
 
-.Reviews-item .text p {
+.Reviews-item .text {
   font-weight: 400;
   font-size: 12px;
   line-height: 17px;
   color: #000;
   margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .Reviews-item a.more {
@@ -1196,7 +1200,7 @@ footer {
   }
 
   .Lang {
-    padding: 0 0px 50px;
+    padding: 0 0px 40px;
   }
 }
 
@@ -1467,6 +1471,24 @@ footer {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #Block4 {
+    margin-top: 45px;
+  }
+
+  #Block4 .ContWrapper {
+    background: url("../images/baground4.jpg") -450px 15px no-repeat;
+  }
+
+  .Users__head {
+    margin-top: -40px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .Service {
     padding-bottom: 20px;
@@ -1482,7 +1504,7 @@ footer {
     text-align: center;
   }
 
-  .Reviews-item .text p {
+  .Reviews-item .text {
     text-align: left;
   }
 
