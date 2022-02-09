@@ -108,11 +108,23 @@ a.btn-mini:hover {
   flex: 1 0 auto;
 }
 
-.ContWrapper {
+.ContainerWrap {
   max-width: 1230px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.Content {
+  padding-top: 135px;
+}
+
+.HD-main {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000;
+  text-transform: uppercase;
 }
 
 .Fixed-bar {
@@ -151,6 +163,7 @@ header {
   align-items: flex-start;
   padding-top: 10px;
   position: relative;
+  height: 77px;
 }
 
 .Logo {
@@ -386,6 +399,10 @@ header {
   cursor: pointer;
 }
 
+.Flag__select:hover span {
+  font-weight: 500;
+}
+
 .Flag__select span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -564,13 +581,6 @@ header {
   justify-content: center;
 }
 
-.Service__hd {
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 33px;
-  color: #000;
-}
-
 .Service__img {
   margin-bottom: 25px;
 }
@@ -594,7 +604,7 @@ header {
   overflow: hidden;
 }
 
-#Block2 .ContWrapper {
+#Block2 .ContainerWrap {
   background: url("../images/baground2.jpg") center top no-repeat;
   width: 1226px;
   height: 1232px;
@@ -603,6 +613,13 @@ header {
   position: relative;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+
+#Block2 .HD-main {
+  position: absolute;
+  top: 64px;
+  left: 15px;
+  width: 230px;
 }
 
 .img-hand-phone {
@@ -614,22 +631,10 @@ header {
 .HowWork {
   position: absolute;
   top: 84px;
-  left: 136px;
+  left: 153px;
   background: url("../images/polosa.png") center top no-repeat;
   width: 686px;
   height: 860px;
-}
-
-.HowWork__head {
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 33px;
-  color: #000;
-  position: absolute;
-  top: 64px;
-  left: 40px;
-  width: 230px;
-  text-transform: uppercase;
 }
 
 .HowWork__item {
@@ -737,12 +742,7 @@ header {
   margin-right: 20px;
 }
 
-.Lang__hd {
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 36px;
-  color: #000;
-  text-transform: uppercase;
+.Lang .HD-main {
   margin-bottom: 40px;
 }
 
@@ -815,11 +815,7 @@ header {
   width: 43%;
 }
 
-.Advantage__info .hd {
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 33px;
-  color: #000;
+.Advantage__info .HD-main {
   margin-bottom: 20px;
 }
 
@@ -869,7 +865,7 @@ header {
   margin-right: 15px;
 }
 
-#Block4 .ContWrapper {
+#Block4 .ContainerWrap {
   background: url("../images/baground4.jpg") center 15px no-repeat;
 }
 
@@ -1150,6 +1146,221 @@ footer {
   padding-bottom: 15px;
 }
 
+.Contacts {
+  padding: 0 0 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Contacts__cantryInfo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 360px;
+  flex: 0 0 360px;
+  margin-right: 20px;
+}
+
+.Contacts .HD-main {
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.Contacts__wrap-tab {
+  background: url("../images/bg-patern.jpg") left top repeat;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.Contacts__map {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 656px;
+  flex: 0 1 656px;
+}
+
+.Select-Cantry {
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+
+.Select-Cantry__Town span.txt {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #CB0FE0;
+  text-transform: uppercase;
+}
+
+.Select-Cantry__trigger {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 3px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.btn-trigger {
+  font-size: 0;
+}
+
+.btn-trigger:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.Cantry__dropdown {
+  display: none;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  padding: 2px 8px;
+  position: absolute;
+  top: 30px;
+  left: -5px;
+  z-index: 99;
+  width: 257px;
+}
+
+.Cantry__dropdown .Flag__select:hover {
+  cursor: pointer;
+}
+
+.Cantry__dropdown .Flag__select:hover span {
+  font-weight: 500;
+}
+
+.Cantry__dropdown .Flag__select span {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.Cantry-tab.active {
+  display: block;
+}
+
+.Cantry-tab {
+  display: none;
+}
+
+.Contacts-field:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.Contacts-field__title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.Contacts-field__info {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.Contacts-field__info a[href^="tel:"] {
+  color: #000;
+  text-decoration: none;
+}
+
+.Contacts-field__info a {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  text-decoration: none;
+}
+
+.Contacts-field__info a:hover {
+  text-decoration: underline;
+}
+
+.Contacts-field__time {
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.PrivPolicy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.PrivPolicy__cont {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0;
+  flex: 1 0;
+}
+
+.PrivPolicy__cont .HD-main {
+  margin-bottom: 20px;
+}
+
+.PrivPolicy__menu {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 265px;
+  flex: 0 0 265px;
+  margin-left: 100px;
+}
+
+.PrivPolicy__menu ul li a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  color: #CB0FE0;
+  text-decoration: none;
+}
+
+.PrivPolicy__menu ul li a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.PrivPolicy__menu ul li ul {
+  list-style: disc;
+  margin-left: 25px;
+}
+
+.PrivPolicy__menu ul li ul li::marker {
+  color: #CB0FE0;
+}
+
+.PrivPolicy__menu ul li ul li a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #CB0FE0;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 1200px) {
@@ -1172,8 +1383,15 @@ footer {
     transform: translate(-78%, 0px);
   }
 
-  #Block2 .ContWrapper {
+  #Block2 .ContainerWrap {
     width: 100%;
+  }
+
+  #Block2 .HD-main {
+    width: 100%;
+    position: static;
+    padding: 40px;
+    text-align: center;
   }
 
   .img-hand-phone {
@@ -1184,13 +1402,6 @@ footer {
   .HowWork {
     top: 154px;
     left: 15px;
-  }
-
-  .HowWork__head {
-    width: 100%;
-    position: static;
-    padding: 40px;
-    text-align: center;
   }
 
   .HowWork__item-2 {
@@ -1211,8 +1422,27 @@ footer {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .PrivPolicy__cont {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .PrivPolicy__menu {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+}
+
 @media only screen and (max-width: 1018px) {
-  #Block2 .ContWrapper {
+  #Block2 .ContainerWrap {
     background: url("../images/baground2.jpg") center top repeat;
     background-size: cover;
     height: auto;
@@ -1261,7 +1491,7 @@ footer {
     margin-right: 0;
   }
 
-  .Lang__hd {
+  .Lang .HD-main {
     margin-bottom: 20px;
   }
 
@@ -1356,6 +1586,10 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+  .Content {
+    padding-top: 100px;
+  }
+
   .HeadBody {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1389,7 +1623,7 @@ footer {
     width: 100%;
   }
 
-  .Advantage__info .hd {
+  .Advantage__info .HD-main {
     text-align: center;
   }
 
@@ -1400,6 +1634,54 @@ footer {
   .FootWrap__logo {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .Contacts {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 0 30px;
+  }
+
+  .Contacts__cantryInfo {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+
+  .Contacts .HD-main {
+    padding-left: 15px;
+  }
+
+  .Contacts__wrap-tab {
+    padding: 15px;
+  }
+
+  .Contacts__map {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+  .Select-Cantry {
+    padding-left: 15px;
+  }
+
+  .Select-Cantry__Town {
+    position: relative;
+  }
+
+  .Select-Cantry__trigger {
+    position: static;
+  }
+
+  .Cantry__dropdown {
+    left: 0;
+    top: unset;
+  }
+
+  .Contacts-field:not(:last-child) {
+    margin-bottom: 15px;
   }
 }
 
@@ -1476,7 +1758,7 @@ footer {
     margin-top: 45px;
   }
 
-  #Block4 .ContWrapper {
+  #Block4 .ContainerWrap {
     background: url("../images/baground4.jpg") -450px 15px no-repeat;
   }
 

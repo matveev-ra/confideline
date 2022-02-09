@@ -34,6 +34,55 @@ $(function () {
             $(".selectlink-js").removeClass('active');
         }
     });
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".selectlink-js"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0  ) 
+        { // и не по его дочерним элементам
+			//div.hide(); // скрываем его
+            $('.Flag__dropdown').slideUp(200);
+		}	
+	});
+
+
+    
+
+    $('.btn-trigger').click(function (e) {
+        $('.Cantry__dropdown').slideToggle(200);
+    });
+
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".btn-trigger"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0  ) 
+        { // и не по его дочерним элементам
+			//div.hide(); // скрываем его
+            $('.Cantry__dropdown').slideUp(200);
+		}	
+	});
+
+    $('.Cantry-js ').on('click', function (e) {
+        var cantry = $(this).children().text()
+        $("span.txt").text(cantry);
+        $('.Cantry__dropdown').slideUp(200);
+                
+            
+    });
+    $(".Cantry__dropdown .Flag__select").on("click", function(){
+        var tabs = $(".Cantry__dropdown .Flag__select")
+            cont = $(".Contacts__wrap-tab .Cantry-tab");
+      // Удаляем классы active
+        tabs.removeClass("active");
+        cont.removeClass("active");
+      // Добавляем классы active
+        $(this).addClass("active");
+        cont.eq($(this).index()).addClass("active");
+        return false;
+    });
+
+
+
+
 
     //подключение слайдера для отзывово
     $('.Reviews-slider').owlCarousel({

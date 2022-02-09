@@ -18,12 +18,27 @@
   flex: 1 0 auto;
 }
 
-.ContWrapper {
+.ContainerWrap {
   max-width: 1230px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.Content {
+  padding-top: 135px;
+  @include max-s(768px)  {
+    padding-top: 100px;
+  }
+}
+
+.HD-main {
+    @include font800(24px, 33px);
+    color: #000;
+    text-transform: uppercase;
+
+}
+
 
 .Fixed-bar {
   position: fixed !important;
@@ -56,9 +71,7 @@ header {
   align-items: flex-start;
   padding-top: 10px;
   position: relative;
-  @include max-s(1000px)  {
-    
-  }
+  height: 77px;
 }
 
 .Logo {
@@ -300,6 +313,11 @@ header {
     }
   
     &__select {
+      &:hover {
+        span {
+          font-weight: 500;
+        }
+      }
     span {
       display: flex;
       flex-wrap: nowrap;
@@ -509,10 +527,7 @@ header {
     }
   }
 
-  &__hd {
-    @include font800(24px, 33px);
-    color: #000;
-  }
+  
 
   &__img {
     margin-bottom: 25px;
@@ -533,7 +548,7 @@ header {
 
 #Block2 {
   overflow: hidden;
-  .ContWrapper {
+  .ContainerWrap {
     background: url('../images/baground2.jpg') center top no-repeat;
     width: 1226px;
     height: 1232px;
@@ -550,6 +565,19 @@ header {
       height: auto;
       margin-bottom:  40px;
       
+    }
+  }
+  .HD-main {
+    position: absolute;
+    top: 64px;
+    left: 15px;
+    width: 230px;
+
+    @include max-s(1200px)  {
+      width: 100%;
+      position: static;
+      padding: 40px;
+      text-align: center;
     }
   }
 }
@@ -576,7 +604,7 @@ header {
   .HowWork {
     position: absolute;
     top: 84px;
-    left: 136px;
+    left: 153px;
     background: url('../images/polosa.png') center top no-repeat;
     width: 686px;
     height: 860px;
@@ -597,21 +625,7 @@ header {
     }
 
 
-		&__head {
-      @include font800(24px,33px);
-      color: #000;
-      position: absolute;
-      top: 64px;
-      left: 40px;
-      width: 230px;
-      text-transform: uppercase;
-      @include max-s(1200px)  {
-        width: 100%;
-        position: static;
-        padding: 40px;
-        text-align: center;
-      }
-    }
+		
 
 		&__item {
       position: absolute;
@@ -701,7 +715,7 @@ header {
   padding-bottom: 40px;
  
 
-  .ContWrapper {}
+  .ContainerWrap {}
 }
 
 .Lang {
@@ -726,10 +740,7 @@ header {
       }
     }
 
-		&__hd {
-      @include font800(24px,36px);
-      color: #000;
-      text-transform: uppercase;
+		.HD-main {
       margin-bottom: 40px;
       @include max-s(1018px)  {
         margin-bottom: 20px;
@@ -806,9 +817,7 @@ header {
     @include max-s(768px)  {
       width: 100%;
     }
-    .hd {
-      @include font800(24px,33px);
-      color: #000;
+    .HD-main {
       margin-bottom: 20px;
       @include max-s(768px)  {
         text-align: center;
@@ -858,7 +867,7 @@ header {
   @include max-s(600px)  {
     margin-top: 45px;
   }
-  .ContWrapper {
+  .ContainerWrap {
     background: url('../images/baground4.jpg') center 15px no-repeat;
     @include max-s(600px)  {
       background: url('../images/baground4.jpg') -450px 15px no-repeat;
@@ -1139,4 +1148,227 @@ footer {
 }
 
 
+.Contacts {
+  padding: 0 0 90px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  @include max-s(768px)  {
+    flex-wrap: wrap;
+    padding: 0 0 30px;
+  }
+
+  &__cantryInfo {
+    flex:0 0 360px;
+    margin-right: 20px;
+    @include max-s(768px)  {
+      flex: 1 1 100%;
+      margin-right: 0;
+    }
+  }
+
+  .HD-main{
+    margin-bottom: 10px;
+    padding-left: 30px;
+
+    @include max-s(768px)  {
+      padding-left: 15px;
+    }
+  }
+
+  &__wrap-tab {
+    background: url('../images/bg-patern.jpg') left top repeat;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    padding: 30px; 
+    @include max-s(768px)  {
+      padding: 15px;
+    }
+  }
+
+  &__map {
+    flex: 0 1 656px;
+    @include max-s(768px)  {
+      flex: 0 1 100%;
+    }
+   
+  }
+}
+
+.Select-Cantry {
+  padding-left: 30px;
+  margin-bottom: 30px;
+  @include max-s(768px)  {
+    padding-left: 15px;
+  }
+
+  &__Town {
+    @include max-s(768px)  {
+      position: relative;
+    }
+    span.txt {
+      @include font800(24px, 33px);
+      color: #CB0FE0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__trigger {
+    display:inline-block;
+    vertical-align:top;
+    margin-top: 3px;
+    margin-left: 10px;
+    position: relative;
+    @include max-s(768px)  {
+      position: static;
+    }
+    
+  }
+}
+.btn-trigger {
+  font-size: 0;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+}
+
+.Cantry__dropdown {
+  display: none;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  padding: 2px 8px;
+  position: absolute;
+  top: 30px;
+  left: -5px;
+  z-index: 99;
+  width: 257px;
+
+    @include max-s(768px)  {
+      left: 0;
+      top: unset;
+    }
+
+  .Flag__select {
+    &:hover {
+      cursor: pointer;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    span {
+      justify-content: flex-start;
+    }
+  }
+
+
+}
+.Cantry-tab.active {
+  display: block;
+}
+.Cantry-tab{
+  display: none;
+}
+.Contacts-field {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @include max-s(768px)  {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    @include font400(14px,18px);
+    color: #000;
+  }
+
+  &__info {
+    @include font500(18px,21px);
+    color: #000;
+
+    a[href^="tel:"] {
+      color: #000;
+      text-decoration: none;
+    }
+    a {
+      @include font500(18px,21px);
+      color: #000;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+     }
+  }
+
+  &__time {
+    width: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include font500(18px,21px);
+    color: #000; 
+    
+  }
+}
+.PrivPolicy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  
+  &__cont {
+    flex: 1 0;
+    
+    @include max-s(1024px)  {
+      flex: 1 1 100%;
+      order: 1;
+    }
+    .HD-main { margin-bottom: 20px; }
+    
+  }
+
+  &__menu {
+    flex: 0 0 265px;
+    margin-left: 100px;
+    @include max-s(1024px)  {
+      flex: 1 1 100%;
+      margin-left: 0px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+
+      li {
+
+        a {
+          @include font500(14px,30px);
+          color: #CB0FE0;
+          text-decoration: none;
+          &:hover {
+            color: #000;
+            text-decoration: underline;
+          }
+        }
+        ul {
+          list-style: disc;
+          margin-left: 25px;
+          li {
+            &::marker {
+              color: #CB0FE0;
+            }
+            a {
+              @include font400(14px,30px);
+              color: #CB0FE0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
 
