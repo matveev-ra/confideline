@@ -43,8 +43,7 @@ $(function () {
             $('.Flag__dropdown').slideUp(200);
 		}	
 	});
-
-
+    
     
 
     $('.btn-trigger').click(function (e) {
@@ -133,5 +132,29 @@ $(function () {
                 closeClass:'close'
             });
     });
+
+// form label
+(function ($) {
+    function topLabel(inputType) {
+        $(inputType).each(function () {
+            var $this = $(this);
+            // on focus add class active to label
+            $this.focus(function () {
+                $this.next().addClass("active");
+            });
+            //on blur check field and remove class if needed
+            $this.blur(function () {
+                if ($this.val() === '' || $this.val() === 'blank') {
+                    $this.next().removeClass();
+                }
+            });
+        });
+    }
+    // just add a class of "topLabel to the input field!"
+    topLabel(".topLabel");
+})(jQuery);
+
+
+
 
 });
