@@ -117,7 +117,8 @@ $(function () {
         
     });
     //закрыть боковое меню
-    $('#slide-close').click(function (e) {
+    $('#slide-close, .dropDownMenu ul li a').click(function (e) {
+        e.preventDefault();
         $('.dropDownMenu').fadeToggle();
         $('#hamburger').toggleClass('active');
         $('.dropDownMenu').toggleClass('active');
@@ -154,6 +155,13 @@ $(function () {
     topLabel(".topLabel");
 })(jQuery);
 
+$("a[href^='#']").click(function(e){
+    e.preventDefault();
+    var id  = $(this).attr('href'), //забираем идентификатор бока с атрибута href
+        top = $(id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
+    
+    $("html, body").animate({scrollTop: (top - 90)});
+});
 
 
 

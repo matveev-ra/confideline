@@ -147,6 +147,21 @@ a.btn-mini:hover {
   text-transform: uppercase;
 }
 
+.Contacts-field .HD3 a,
+.Contacts-field__time span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
+.HD3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
 .Fixed-bar {
   position: fixed !important;
   background: #fff;
@@ -605,11 +620,7 @@ header {
   margin-bottom: 25px;
 }
 
-.Service__title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
+.Service .HD3 {
   margin-bottom: 20px;
 }
 
@@ -665,11 +676,7 @@ header {
   margin-bottom: 20px;
 }
 
-.HowWork__item .hd {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
+.HowWork__item .HD3 {
   margin-bottom: 15px;
 }
 
@@ -766,13 +773,6 @@ header {
   margin-bottom: 40px;
 }
 
-.Lang__desc {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
-}
-
 .Lang__info {
   background: url("../images/bg-patern.jpg") left top repeat;
   padding: 50px;
@@ -839,11 +839,7 @@ header {
   margin-bottom: 20px;
 }
 
-.Advantage__info .desc {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
+.Advantage__info .HD3 {
   margin-bottom: 40px;
 }
 
@@ -933,11 +929,7 @@ header {
   margin-bottom: 15px;
 }
 
-.Reviews-item .name {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
+.Reviews-item .HD3 {
   margin-bottom: 40px;
 }
 
@@ -1151,13 +1143,6 @@ footer {
   gap: 20px;
 }
 
-.Modal__name {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
-}
-
 .Modal__text p {
   font-weight: 400;
   font-size: 12px;
@@ -1283,27 +1268,16 @@ footer {
   color: #000;
 }
 
-.Contacts-field__info {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
-}
-
-.Contacts-field__info a[href^="tel:"] {
+.Contacts-field .HD3 a[href^="tel:"] {
   color: #000;
   text-decoration: none;
 }
 
-.Contacts-field__info a {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
+.Contacts-field .HD3 a {
   text-decoration: none;
 }
 
-.Contacts-field__info a:hover {
+.Contacts-field .HD3 a:hover {
   text-decoration: underline;
 }
 
@@ -1317,13 +1291,6 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-}
-
-.Contacts-field__time span {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
 }
 
 .PrivPolicy {
@@ -1413,11 +1380,7 @@ footer {
   text-align: center;
 }
 
-.Sign__item-title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
+.Sign .HD3 {
   margin-bottom: 10px;
 }
 
@@ -1426,7 +1389,6 @@ footer {
   font-size: 14px;
   line-height: 18px;
   color: #000;
-  margin-bottom: 30px;
 }
 
 .Sign__border {
@@ -1436,7 +1398,8 @@ footer {
 }
 
 .Forma {
-  width: 260px;
+  padding-top: 30px;
+  max-width: 260px;
   margin: 0 auto;
 }
 
@@ -1523,15 +1486,17 @@ footer {
 
 .Forma .btn {
   width: auto;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 
 .Forma a.forget {
+  display: block;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: #CB0FE0;
   text-decoration: none;
+  padding-top: 30px;
 }
 
 .Forma a.forget:hover {
@@ -1542,11 +1507,7 @@ footer {
   padding-top: 20px;
 }
 
-.Gender__title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 21px;
-  color: #000;
+.Gender .HD3 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -1602,7 +1563,157 @@ footer {
   color: #000;
 }
 
+.Bg-Forget {
+  width: 100%;
+  background-image: url("../images/baground6-2.jpg");
+  background-position: center 140px;
+  background-repeat: no-repeat;
+  margin: 0px auto;
+}
+
+.Forms {
+  width: 100%;
+  height: 673px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.Forms__img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  position: relative;
+  width: 592px;
+  height: 538px;
+}
+
+.Forms__img img {
+  position: absolute;
+  top: -20px;
+  left: 28px;
+  max-width: unset;
+}
+
+.Forms__form {
+  width: 420px;
+}
+
+.FormsWrap {
+  width: 100%;
+  background: url("../images/bg-patern.jpg") left top repeat;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.FormsWrap_desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  padding-top: 10px;
+}
+
+.FormsWrap .Forma__field {
+  margin-bottom: 20px;
+}
+
+.FormsWrap .Steps {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+  padding: 30px 0 0;
+}
+
+.Link-login {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  padding-top: 40px;
+}
+
+.Link-login a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #CB0FE0;
+  text-decoration: none;
+}
+
+.Link-login a:hover {
+  text-decoration: underline;
+}
+
+a.creat-link {
+  display: block;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #CB0FE0;
+  text-decoration: none;
+}
+
+a.creat-link:hover {
+  text-decoration: underline;
+}
+
+.Step2 .FormsWrap {
+  max-width: 420px;
+  margin: 0 auto 50px;
+}
+
+.Step2 .Forma__btn {
+  margin-bottom: 40px;
+}
+
+.InviteCode {
+  border-top: 1px dashed #000000;
+}
+
+.InviteCode .HD3 {
+  margin: 20px;
+}
+
+.InviteCode input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+}
+
 /*# sourceMappingURL=layout.css.map */
+
+@media only screen and (max-width: 1260px) {
+  .Forms__img {
+    width: calc(592px - ((1260px - 100vw) / 2));
+  }
+
+  .Forms__img img {
+    left: calc(28px - ((1260px - 100vw) / 2));
+  }
+}
 
 @media only screen and (max-width: 1200px) {
   .HeadBody__img {
@@ -1826,6 +1937,12 @@ footer {
   }
 }
 
+@media only screen and (max-width: 862px) {
+  .Forms__form {
+    margin-left: 40px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .Content {
     padding-top: 100px;
@@ -1868,7 +1985,7 @@ footer {
     text-align: center;
   }
 
-  .Advantage__info .desc {
+  .Advantage__info .HD3 {
     text-align: center;
   }
 
@@ -1923,6 +2040,48 @@ footer {
 
   .Contacts-field:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  .Bg-Forget {
+    background: none;
+  }
+
+  .Forms {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 0px;
+  }
+
+  .Forms__img {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .Forms__img img {
+    position: static;
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .Forms__form {
+    margin: 0 auto;
+  }
+
+  .FormsWrap {
+    padding: 15px;
+  }
+
+  a.creat-link {
+    padding-bottom: 20px;
   }
 }
 
