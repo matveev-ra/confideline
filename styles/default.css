@@ -8,8 +8,8 @@ button::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="subm
 select:focus,input[type="text"]:focus,input[type="password"]:focus,textarea:focus{outline:none}
 select option {padding-left:3px;}
 table{border-collapse:collapse}
-a:link,a:visited{color:#000;text-decoration:underline}
-a:hover{color:#000;text-decoration:none}
+a:link,a:visited{color:#CB0FE0;text-decoration:underline}
+a:hover{color:#CB0FE0;text-decoration:none}
 
 
 *,
@@ -31,7 +31,16 @@ a[href^="tel:"] {
     text-decoration: none;
 }
 
-ul {list-style: none;}
+ul {
+    list-style: none;
+    margin-left: 20px;
+}
+
+li {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 15px;
+}
 
 p {
     font-size: 14px;
@@ -40,8 +49,8 @@ p {
     padding-bottom: 20px;
 }
 
-strong {
-    font-weight: 500;
+b, strong {
+    font-weight: 800;
 }
 
 
@@ -50,13 +59,22 @@ h2 {
     font-size: 18px;
     line-height: 21px;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+    margin-bottom: 15px;
 }
 
 
 .indent {
     padding: 10px 0;
     border-left: 3px solid #CB0FE0;
+    margin-bottom: 20px;
 }
 .indent p {
     padding-left: 20px;

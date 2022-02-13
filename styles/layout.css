@@ -147,7 +147,7 @@ a.btn-mini:hover {
   text-transform: uppercase;
 }
 
-.Contacts-field .HD3 a,
+.Contacts-field .HD2 a,
 .Contacts-field__time span {
   font-weight: 500;
   font-size: 18px;
@@ -155,7 +155,7 @@ a.btn-mini:hover {
   color: #000;
 }
 
-.HD3 {
+.HD2 {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
@@ -620,7 +620,7 @@ header {
   margin-bottom: 25px;
 }
 
-.Service .HD3 {
+.Service .HD2 {
   margin-bottom: 20px;
 }
 
@@ -676,7 +676,7 @@ header {
   margin-bottom: 20px;
 }
 
-.HowWork__item .HD3 {
+.HowWork__item .HD2 {
   margin-bottom: 15px;
 }
 
@@ -839,7 +839,7 @@ header {
   margin-bottom: 20px;
 }
 
-.Advantage__info .HD3 {
+.Advantage__info .HD2 {
   margin-bottom: 40px;
 }
 
@@ -929,7 +929,7 @@ header {
   margin-bottom: 15px;
 }
 
-.Reviews-item .HD3 {
+.Reviews-item .HD2 {
   margin-bottom: 40px;
 }
 
@@ -1268,16 +1268,16 @@ footer {
   color: #000;
 }
 
-.Contacts-field .HD3 a[href^="tel:"] {
+.Contacts-field .HD2 a[href^="tel:"] {
   color: #000;
   text-decoration: none;
 }
 
-.Contacts-field .HD3 a {
+.Contacts-field .HD2 a {
   text-decoration: none;
 }
 
-.Contacts-field .HD3 a:hover {
+.Contacts-field .HD2 a:hover {
   text-decoration: underline;
 }
 
@@ -1293,7 +1293,7 @@ footer {
   justify-content: space-between;
 }
 
-.PrivPolicy {
+.ContPage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1305,24 +1305,28 @@ footer {
   padding-bottom: 50px;
 }
 
-.PrivPolicy__cont {
+.ContPage__cont {
   -webkit-box-flex: 1;
   -ms-flex: 1 0;
   flex: 1 0;
 }
 
-.PrivPolicy__cont .HD-main {
+.ContPage__cont .HD-main {
   margin-bottom: 20px;
 }
 
-.PrivPolicy__menu {
+.ContPage__menu {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 265px;
   flex: 0 0 265px;
   margin-left: 100px;
 }
 
-.PrivPolicy__menu ul li a {
+.ContPage__menu ul li {
+  margin-bottom: 0;
+}
+
+.ContPage__menu ul li a {
   font-weight: 500;
   font-size: 14px;
   line-height: 30px;
@@ -1330,21 +1334,21 @@ footer {
   text-decoration: none;
 }
 
-.PrivPolicy__menu ul li a:hover {
+.ContPage__menu ul li a:hover {
   color: #000;
   text-decoration: underline;
 }
 
-.PrivPolicy__menu ul li ul {
+.ContPage__menu ul li ul {
   list-style: disc;
   margin-left: 25px;
 }
 
-.PrivPolicy__menu ul li ul li::marker {
+.ContPage__menu ul li ul li::marker {
   color: #CB0FE0;
 }
 
-.PrivPolicy__menu ul li ul li a {
+.ContPage__menu ul li ul li a {
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
@@ -1380,7 +1384,7 @@ footer {
   text-align: center;
 }
 
-.Sign .HD3 {
+.Sign .HD2 {
   margin-bottom: 10px;
 }
 
@@ -1507,7 +1511,7 @@ footer {
   padding-top: 20px;
 }
 
-.Gender .HD3 {
+.Gender .HD2 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -1685,7 +1689,7 @@ a.creat-link:hover {
   border-top: 1px dashed #000000;
 }
 
-.InviteCode .HD3 {
+.InviteCode .HD2 {
   margin: 20px;
 }
 
@@ -1701,6 +1705,119 @@ a.creat-link:hover {
   font-size: 18px;
   line-height: 21px;
   color: #000;
+}
+
+.RegWomen {
+  background: url("../images/bg-patern.jpg") left top repeat;
+  max-width: 815px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  margin-bottom: 40px;
+}
+
+.RegWomen__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.RegWomen__head-titile {
+  width: 50%;
+}
+
+.RegWomen__head-titile .HD2 {
+  margin-bottom: 20px;
+}
+
+.RegWomen__head-titile .desc p {
+  padding-bottom: 20px;
+}
+
+.RegWomen__head-link {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 200px;
+  flex: 0 0 200px;
+  text-align: right;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+}
+
+.RegWomen__head-link span {
+  display: block;
+  padding-bottom: 10px;
+}
+
+.RegWomen__head-link a {
+  color: #CB0FE0;
+  text-decoration: none;
+}
+
+.RegWomen__head-link a:hover {
+  text-decoration: underline;
+}
+
+.RegWomen__body {
+  background: url("../images/img-border.png") left 16px no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.RegWomen__body-item {
+  width: 30%;
+}
+
+.RegWomen__body-item .numb {
+  background: url("../images/img-number2.png") center top no-repeat;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.RegWomen__body-item .text ul {
+  list-style: disc;
+}
+
+.RegWomen__body-item .text a {
+  text-decoration: none;
+}
+
+.RegWomen__body-item .text a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -1775,7 +1892,7 @@ a.creat-link:hover {
 }
 
 @media only screen and (max-width: 1024px) {
-  .PrivPolicy__cont {
+  .ContPage__cont {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1784,7 +1901,7 @@ a.creat-link:hover {
     order: 1;
   }
 
-  .PrivPolicy__menu {
+  .ContPage__menu {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1985,7 +2102,7 @@ a.creat-link:hover {
     text-align: center;
   }
 
-  .Advantage__info .HD3 {
+  .Advantage__info .HD2 {
     text-align: center;
   }
 
@@ -2082,6 +2199,22 @@ a.creat-link:hover {
 
   a.creat-link {
     padding-bottom: 20px;
+  }
+
+  .RegWomen {
+    padding: 15px;
+  }
+
+  .RegWomen__body {
+    background: none;
+  }
+
+  .RegWomen__body-item {
+    width: 100%;
+  }
+
+  .RegWomen__body-item .numb {
+    margin: 0 auto 20px;
   }
 }
 
@@ -2213,6 +2346,21 @@ a.creat-link:hover {
   .Footmenu ul {
     width: 100%;
     text-align: center;
+  }
+
+  .RegWomen__head {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .RegWomen__head-titile {
+    width: 100%;
+  }
+
+  .RegWomen__head-link {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
 }
 
