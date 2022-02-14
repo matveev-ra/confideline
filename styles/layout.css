@@ -1319,7 +1319,6 @@ footer {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 265px;
   flex: 0 0 265px;
-  margin-left: 100px;
 }
 
 .ContPage__menu ul li {
@@ -1353,6 +1352,14 @@ footer {
   font-size: 14px;
   line-height: 30px;
   color: #CB0FE0;
+}
+
+.ContPage__menu.Left-menu {
+  margin-right: 100px;
+}
+
+.ContPage__menu.Right-menu {
+  margin-left: 100px;
 }
 
 .Sign {
@@ -1907,6 +1914,14 @@ a.creat-link:hover {
     flex: 1 1 100%;
     margin-left: 0px;
     margin-bottom: 20px;
+  }
+
+  .ContPage__menu.Left-menu {
+    margin-right: 0px;
+  }
+
+  .ContPage__menu.Right-menu {
+    margin-left: 0px;
   }
 }
 

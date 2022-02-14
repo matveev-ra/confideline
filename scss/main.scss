@@ -1339,7 +1339,7 @@ footer {
 
   &__menu {
     flex: 0 0 265px;
-    margin-left: 100px;
+    
 
       @include max-s(1024px)  {
         flex: 1 1 100%;
@@ -1374,6 +1374,19 @@ footer {
           }
         }
       }
+    }
+
+    &.Left-menu {
+      margin-right: 100px;
+      @include max-s(1024px)  {
+        margin-right: 0px;
+       }
+    }
+    &.Right-menu {
+      margin-left: 100px;
+      @include max-s(1024px)  {
+        margin-left: 0px;
+       }
     }
   }
 
