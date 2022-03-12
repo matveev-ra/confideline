@@ -263,7 +263,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    gap: 10px;
+    
     @include font400(18px, 20px);
     color: #fff;
 
@@ -282,6 +282,7 @@ header {
       text-align: center;
       transform: rotate(45deg);
       transition: all .1s ease-in-out;
+      margin-right: 10px;
 
     }
   }
@@ -412,9 +413,16 @@ header {
     border-top: 1px solid #999;
     padding: 20px 30px;
     align-items: center;
-    gap: 30px;
+    // gap: 30px;
   }
   
+  a.btn-mini {
+    margin-bottom: 30px;
+  }
+
+  .LogOut {
+    margin-bottom: 30px;
+  }
 }
 
 
@@ -1001,6 +1009,9 @@ footer {
       width: 100%;
       margin-bottom: 20px;
     }
+    @include max-s(575px){
+       text-align: center;
+    }
      a {
        @include font500(24px,28px);
        color: #000;
@@ -1407,7 +1418,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px 10px;
+    
+
     @include max-s(650px)  {
       padding: 15px; 
     }
@@ -1419,6 +1431,7 @@ footer {
     text-align: center;
     @include max-s(650px)  {
       flex:0 1 100%;
+      margin-bottom: 30px;
     }
   }
 
@@ -1435,6 +1448,10 @@ footer {
     width: 1px;
     opacity: 0.21;
     border-left: 1px dashed #000000;
+    margin: 0 10px;
+    @include max-s(650px){
+      display: none; 
+    }
   }
 }
 
@@ -1538,7 +1555,6 @@ padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
   }
 
   a.Gender__item {
@@ -1552,6 +1568,9 @@ padding-top: 20px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    margin: 0 10px 10px;
+
+
     &:hover {
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }

@@ -351,7 +351,6 @@ header {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: start;
-  gap: 10px;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
@@ -379,6 +378,7 @@ header {
   -webkit-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
+  margin-right: 10px;
 }
 
 .Top-info {
@@ -506,6 +506,14 @@ header {
 
 .Top-info2 {
   display: none;
+}
+
+.Top-info2 a.btn-mini {
+  margin-bottom: 30px;
+}
+
+.Top-info2 .LogOut {
+  margin-bottom: 30px;
 }
 
 .HeadBody {
@@ -1381,7 +1389,6 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 20px 10px;
 }
 
 .Sign__item {
@@ -1406,6 +1413,7 @@ footer {
   width: 1px;
   opacity: 0.21;
   border-left: 1px dashed #000000;
+  margin: 0 10px;
 }
 
 .Forma {
@@ -1532,7 +1540,6 @@ footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 20px;
 }
 
 .Gender a.Gender__item {
@@ -1556,6 +1563,7 @@ footer {
   -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
+  margin: 0 10px 10px;
 }
 
 .Gender a.Gender__item:hover {
@@ -2276,7 +2284,6 @@ a.creat-link:hover {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 30px;
   }
 
   .Modal {
@@ -2312,6 +2319,11 @@ a.creat-link:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
+    margin-bottom: 30px;
+  }
+
+  .Sign__border {
+    display: none;
   }
 }
 
@@ -2376,6 +2388,12 @@ a.creat-link:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .FootWrap__logo {
+    text-align: center;
   }
 }
 
