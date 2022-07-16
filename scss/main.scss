@@ -36,6 +36,13 @@
   }
 }
 
+.Content-2 {
+  padding-top: 135px;
+  @include max-s(768px)  {
+    padding-top: 100px;
+  }
+}
+
  .BG-sign {
   background: url('../images/baground5.jpg') center top no-repeat;
   flex: 1 0 auto;
@@ -1873,6 +1880,89 @@ a.creat-link {
     }
   }
 }
+
+
+.User {
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__top-left {
+    width: 49%;
+  }
+
+  &__name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  &__name-avatar {
+    
+  }
+
+  &__name-name {}
+
+  &__name-mesage {}
+}
+.User-top {
+
+  &__right {}
+}
+.AutoTranslate {
+}
+.SendMessage {
+}
+.btn {
+}
+.BoxGift {
+}
+.btn-gift {
+}
+.Like {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
