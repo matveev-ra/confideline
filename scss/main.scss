@@ -122,7 +122,7 @@ header {
   flex: 1 1 auto;
   margin: 23px 15px 0 ;
 
-  @include max-s(1000px)  {
+  @include max-s(1100px)  {
     order:1;
     flex: 0 0 auto;
   }
@@ -131,16 +131,27 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap:40px;
-    @include max-s(1000px)  {
+    
+
+    
+    @include max-s(1100px)  {
       display: block;
       padding: 20px 50px 0;
     }
 
     li {
-      @include max-s(1000px)  {
-        height: 50px;
+      &:not(:last-child) {
+        margin-right: 40px;
+
+        @include max-s(1260px){
+           margin-right: 20px;
+        }
+      } 
+
+      @include max-s(1100px)  {
+        height: 24px;
       }
+
       a {
         @include font400(12px, 14px);
         color: #000;
@@ -156,7 +167,7 @@ header {
 
 .dropDownMenu {
 
-  @include max-s(1000px)  {
+  @include max-s(1100px)  {
     display: none;
     position: fixed;
     top: 0;
@@ -189,7 +200,7 @@ header {
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
 
-  @include max-s(1000px)  {
+  @include max-s(1100px)  {
      display: block;
   //   margin-top: 25px;
   //   // position: absolute;
@@ -306,7 +317,7 @@ header {
   align-items: flex-start;
   margin-top: 11px;
 
-  @include max-s(650px)  {
+  @include max-s(768px)  {
     display: none;
   }
 
@@ -412,7 +423,7 @@ header {
 .Top-info2 {
   display: none;
 
-  @include max-s(650px)  {
+  @include max-s(768px)  {
     display: block;
     display: flex;
     flex-direction: column;
@@ -429,6 +440,26 @@ header {
 
   .LogOut {
     margin-bottom: 30px;
+  }
+
+  .btn-upgrade {
+    @include max-s(768px){
+      margin-right: 0;
+      margin-bottom: 20px; 
+    }
+  }
+
+  .Flag {
+    @include max-s(768px){
+      margin-bottom: 20px; 
+    }
+  }
+
+  .Profile {
+    @include max-s(768px) {
+      margin-left: 0;
+
+    }
   }
 }
 
@@ -1071,6 +1102,7 @@ footer {
 
   ul {
     width: 180px;
+    margin-left: 0;
 
     @include max-s(576px)  {
       width: 100%;
@@ -1888,53 +1920,431 @@ a.creat-link {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 10px;
   }
 
   &__top-left {
     width: 49%;
+
+    @include max-s(1024px){
+      width: 100%; 
+    }
+  }
+  &__top-right {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+
+    @include max-s(1024px){
+      width: 100%; 
+      justify-content: start;
+    }
+
+    .AutoTranslate, .SendMessage, .BoxGift, .Like {
+      @include max-s(1024px){
+        margin-bottom: 15px; 
+      }
+    }  
+
   }
 
   &__name {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: start;
+    align-items: center;
+    position: relative;
+
+    @include max-s(500px){
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
   }
 
   &__name-avatar {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    font-size: 0;
+    order:1;
+
+    img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+    }
+  }
+
+  &__name-name {
+    @include font500(24px,33px);
+    color: #000;
+    margin-right: 15px;
+    order:1;
+
     
   }
 
-  &__name-name {}
+  &__name-mesage {
+    width: auto;
+    // height: 47px;
+    min-height: 47px;
+    border-radius: 5px;
+    border: 1px dashed #000;
+    padding: 0 15px; 
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    order:1;
 
-  &__name-mesage {}
-}
-.User-top {
+      @include max-s(500px){
+        order: 0;
+        width: 100%;
+        margin-bottom: 5px;
+        margin-left: 37px;
+      }
 
-  &__right {}
+     span {
+       @include font300(18px,21px);
+       color: #000;
+     }
+
+     i {
+      position: absolute;
+      left: -11px;
+      bottom: -1px;
+      width: 15px;
+      height: 15px;
+      border-bottom: 1px dashed #000;
+      border-top: 1px dashed transparent;
+      border-left: 1px dashed transparent;
+      border-right: 1px dashed transparent;
+      background: #fff;
+
+      b {
+        position: absolute;
+        left: -5px;
+        bottom: 6px;
+        height: 1px;
+        width: 17px;    
+        border-top: 1px dashed #000;
+        transform: rotate(129deg);
+      }
+     }
+  }
 }
+
 .AutoTranslate {
+  margin-right: 15px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+
+  @include max-s(500px){
+    width: 100%;
+  }
+
 }
+
 .SendMessage {
+  margin-right: 15px;
 }
-.btn {
-}
+
 .BoxGift {
+  margin-right: 15px;
 }
+
 .btn-gift {
+  width: 44px;
+  height: 44px;
+  background: #5E5E5E url('../images/icon-gift.svg') center center no-repeat; 
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #3f3f3f;
+    cursor: pointer;
+  }
 }
+
 .Like {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(11.65deg, #D3D3D3 -14.13%, #D2D2D2 104.86%);
+  border-radius: 5px;
+  position: relative;
+
+  &::after {
+    content:' ';
+    display:block;
+    background: url('../images/icon-heart.svg') center center no-repeat;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &.active {
+    background: linear-gradient(37.71deg, #FF6056 6.17%, #FD3F61 94.94%);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 
+.ProfUser-slider {
+  padding-bottom: 30px;
+  margin-bottom: 90px;
+
+  @include max-s(1260px){
+     width: 95% !important;
+     margin: 0 auto 90px;
+  }
+
+  @include max-s(768px){
+    margin-bottom: 40px;
+ }
 
 
 
+  .ProfUser-item {
+    font-size: 0;
+  }
+
+  .owl-nav {
+    top: 40% !important;
+  }
+}
 
 
+.UserInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  .UserInfo__wrap {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include max-s(540px){
+      width: 100%; 
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    width: 30%;
+    margin-right: 15px;
+
+      @include max-s(768px){
+        width: 45%;
+      }
+      @include max-s(440px){
+        width: 100%;
+        margin-right: 0;
+      }
+
+    &:nth-child(1), 
+    &:nth-child(2), 
+    &:nth-child(3) {
+      border-bottom:1px dashed  #000;
+      margin-bottom: 40px;
+
+      @include max-s(768px){
+         border-bottom:none;
+         margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__title {
+    @include font500(18px,21px);
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    p {
+      @include font300(12px,17px);
+      color: #000;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 15px;
+
+      li {
+        @include font300(12px,17px);
+        color: #000;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .td {
+      @include font300(12px,17px);
+      color: #000;
+      padding-right: 10px;
+    }
+
+    .td2 {
+      @include font500(12px,17px);
+      color: #000;
+      text-align: right;
+    }
+
+  }
+
+  &__right {
+
+  }
+  &__notific {
+    @include font500(12px,17px);
+    color: #CB0FE0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    &::before {
+      content:' ';
+      margin-right: 5px;
+      background: url('../images/icon-point.svg') center top no-repeat;
+      width: 16px;
+      height: 16px; 
+
+    }
+  } 
+}
 
 
+.Notification {
+  margin-right: 20px;
+  margin-top: 11px;
+
+  @include max-s(768px){
+     margin-right: 0;
+     margin-bottom: 20px;
+  }
+
+  &__icon {
+    width: 38px;
+    height: 38px;
+    background: #5E5E5E url("../images/icon-notice.svg") center center no-repeat;
+    border-radius: 50%;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+    
+
+    span {
+      background: #5E5E5E;
+      border-radius: 50%;
+      background: linear-gradient(37.71deg, #FF6056 6.17%, #FD3F61 94.94%);
+      @include font700(12px,16px);
+      color: #fff;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      padding: 2px;
+    }
+  }
+}
 
 
+.Profile {
+  margin-left: 15px;
+  flex: 0 0 38px;
+
+  &__icon {
+    position: relative;
+    
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+    }
+
+    i {
+      position: absolute;
+      bottom: -2px;
+      right: 0;
+      left: 0;
+      background: url('../images/icon-crown-orange.svg') center top no-repeat;
+      width: 16px;
+      height: 16px; 
+      margin: 0 auto;
+    }
+  }
+}
+
+
+.checkbox input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.checkbox__text {
+	position: relative;
+	padding: 0 0 0 40px;
+	cursor: pointer;
+}
+.checkbox__text:before {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 30px;
+	height: 15px;
+	border-radius: 13px;
+	background: #CDD1DA;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	transition: .2s;
+}
+.checkbox__text:after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 2px;
+	width: 12px;
+	height: 12px;
+	border-radius: 10px;
+	background: #FFF;
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	transition: .2s;
+}
+.checkbox input:checked + .checkbox__text:before {
+	background: #9FD468;
+}
+.checkbox input:checked + .checkbox__text:after {
+	left: 15px;
+}
+.checkbox input:focus + .checkbox__text:before {
+	// box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
+}
 
 
 

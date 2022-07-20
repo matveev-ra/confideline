@@ -33,7 +33,7 @@ a[href^="tel:"] {
 
 ul {
     list-style: none;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 li {

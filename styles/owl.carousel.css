@@ -364,9 +364,10 @@
   text-align: center;
   -webkit-tap-highlight-color: transparent;
   position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     right: 0;
     left: 0;
+    font-size: 0;
 }
 
 .owl-dots .owl-dot {
@@ -384,12 +385,13 @@
   -webkit-backface-visibility: visible;
   transition: opacity 200ms ease;
   border-radius: 30px;
-  border: 2px solid #fff;
+  
+  background: #C4C4C4;
 }
 
 .owl-dots .owl-dot.active span,
 .owl-dots .owl-dot:hover span {
-  background: #fff;
+  background: linear-gradient(151.3deg, #A306B5 -1.01%, #F17AFF 90.03%);
 }
 
 

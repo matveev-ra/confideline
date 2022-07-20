@@ -109,6 +109,37 @@ $(function () {
         }
 
     });
+
+    //подключение слайдера для фото в профиле юзера
+    $('.ProfUser-slider').owlCarousel({
+        loop: true,
+        autoWidth:true,
+        margin: 10,
+        nav: true,
+        items: 5,
+        dots: true,
+        navClass: ['slick-prev-t', 'slick-next-t'],
+        responsiveClass: true,
+        responsive: {
+            320: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            }
+
+        }
+
+    });
+
+
+
     //работа бургера меню
     $('#hamburger').click(function (e) {
         $('.dropDownMenu').fadeToggle();
@@ -134,35 +165,39 @@ $(function () {
             });
     });
 
-// form label
-(function ($) {
-    function topLabel(inputType) {
-        $(inputType).each(function () {
-            var $this = $(this);
-            // on focus add class active to label
-            $this.focus(function () {
-                $this.next().addClass("active");
+    // form label
+    (function ($) {
+        function topLabel(inputType) {
+            $(inputType).each(function () {
+                var $this = $(this);
+                // on focus add class active to label
+                $this.focus(function () {
+                    $this.next().addClass("active");
+                });
+                //on blur check field and remove class if needed
+                $this.blur(function () {
+                    if ($this.val() === '' || $this.val() === 'blank') {
+                        $this.next().removeClass();
+                    }
+                });
             });
-            //on blur check field and remove class if needed
-            $this.blur(function () {
-                if ($this.val() === '' || $this.val() === 'blank') {
-                    $this.next().removeClass();
-                }
-            });
-        });
-    }
-    // just add a class of "topLabel to the input field!"
-    topLabel(".topLabel");
-})(jQuery);
+        }
+        // just add a class of "topLabel to the input field!"
+        topLabel(".topLabel");
+    })(jQuery);
 
-$("a[href^='#']").click(function(e){
-    e.preventDefault();
-    var id  = $(this).attr('href'), //забираем идентификатор бока с атрибута href
-        top = $(id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
-    
-    $("html, body").animate({scrollTop: (top - 90)});
-});
+    $("a[href^='#']").click(function(e){
+        e.preventDefault();
+        var id  = $(this).attr('href'), //забираем идентификатор бока с атрибута href
+            top = $(id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
+        
+        $("html, body").animate({scrollTop: (top - 90)});
+    });
 
-
+    $('.Like').click(function (e) {
+        e.stopPropagation();
+        $(this).toggleClass('active');
+      
+      });
 
 });
