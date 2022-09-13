@@ -131,12 +131,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
-
-    
+        
     @include max-s(1100px)  {
       display: block;
-      padding: 20px 50px 0;
+      padding: 20px 10px 0 25px;
     }
 
     li {
@@ -146,20 +144,35 @@ header {
         @include max-s(1260px){
            margin-right: 20px;
         }
+
+        @include max-s(1100px){
+          margin-right: 0px;
+       }
+
       } 
 
       @include max-s(1100px)  {
-        height: 24px;
+        //height: 24px;
       }
 
       a {
-        @include font400(12px, 14px);
+        display: block;
+        @include font400(12px, 20px);
         color: #000;
         text-transform: uppercase;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
         }
+      }
+    }
+
+    ul {
+      display: none;
+      padding: 15px 0 0 15px;
+
+      li {
+
       }
     }
   }
@@ -179,10 +192,13 @@ header {
     -webkit-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
     transition: all 0.25s linear;
+    overflow: auto;
   }
  
   &.active {
     left:0px;
+    width: 230px;
+
     .Smenu__close {
       display: block;
     }
@@ -456,6 +472,8 @@ header {
   }
 
   .Profile {
+
+
     @include max-s(768px) {
       margin-left: 0;
 
@@ -2236,11 +2254,16 @@ a.creat-link {
 .Notification {
   margin-right: 20px;
   margin-top: 11px;
+  position: relative;
 
-  @include max-s(768px){
-     margin-right: 0;
-     margin-bottom: 20px;
-  }
+    @include max-s(768px){
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    @include max-s(500px){
+      position: static;
+    }
 
   &__icon {
     width: 38px;
@@ -2267,15 +2290,97 @@ a.creat-link {
       padding: 2px;
     }
   }
+
+  &__title {
+    @include font500(18px,21px);
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  &__item { 
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #000;
+    
+  }
+
+  &__item-img {
+    flex: 0 0 16px;
+    margin-right: 20px;
+  }
+
+  &__item-mess { 
+    flex: 1 1 auto;
+  }
+
+  &__item-txt {
+    @include font400(14px,18px);
+    color:#000;
+    margin-bottom: 3px;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  &__item-days { 
+    @include font300(10px,14px);
+    color: #000;
+  }
+
 }
 
+.Notification-popup {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 40px;
+  margin-left: -140px;
+  width: 320px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+
+    @include max-s(500px){
+      margin-left: 0px;
+      top: 60px;
+    }
+    @include max-s(350px){
+      width: 300px;
+    }
+
+  &-wrap {
+    padding: 25px 25px 0 25px;
+  }
+
+  &-foot {
+    background: #F9F9F9;
+    text-align: center;
+    @include font500(12px,17px);
+    color: #CB0FE0;
+    padding: 5px 0;
+    border-radius: 0 0 5px 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+
+}
 
 .Profile {
+  position: relative;
   margin-left: 15px;
   flex: 0 0 38px;
 
   &__icon {
     position: relative;
+    width: 38px;
     
     &:hover {
       cursor: pointer;
@@ -2346,8 +2451,77 @@ a.creat-link {
 	// box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
 }
 
+.li-profile {
+  display: none;
+
+  @include max-s(768px){
+    display: block; 
+  }
+}
+
+.profile-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .Profile__icon {
+    flex: 0 0 38px;
+    margin-right: 10px;
+  }
 
 
+  &__name { 
+    flex: 1 1 auto;
+  }
+
+  .arrow-down {
+    background: url('../images/arrow3.svg') center top no-repeat; 
+    position: absolute;
+    top: 19px;
+    right: 0px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.Profile-popup {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 182px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+
+  &__menu {
+    padding: 15px;
+
+
+    li {
+      margin-bottom: 0;
+      a {
+        display: block;
+        @include font400(14px,20px);
+        color: #000;
+        padding: 10px 15px;
+        text-decoration: none;
+        max-width: 100%;
+
+        &:hover {
+          background: #F9F9F9;
+        }
+
+      }
+    }
+  }
+}
 
 
 
