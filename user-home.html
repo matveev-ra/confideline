@@ -32,20 +32,42 @@
                 <span>+</span>Закрыть
               </div>
             </div>
-            <ul>
+            <ul class="accordeon">
               <li><a href="">Home</a></li>
               <li><a href="">FAQ'</a></li>
               <li><a href="">SEARCH</a></li>
               <li><a href="">Messages</a></li>
               <li><a href="">support</a></li>
+
+              <li class="li-profile">
+                <span class="profile-item">
+                  <div class="Profile__icon">
+                    <img src="images/icon-profile-avatar.png" alt="">
+                    <i></i>
+                  </div>
+                  <div class="profile-item__name">Ramzez</div>
+                  <div class="arrow-down"></div>
+                </span>
+                <ul class="profile-menu">
+                  <li><a href="">My profile</a></li>
+                  <li><a href="">Visitors</a></li>
+                  <li><a href="">Favorites</a></li>
+                  <li><a href="">My matches</a></li>
+                  <li><a href="">Membership</a></li>
+                  <li><a href="">Settings</a></li>
+                  <li><a href="">Logout</a></li>
+                </ul>
+              </li>
+              
+
             </ul>
             <div class="Top-info2">
               
-              <div class="Notification">
+              <!-- <div class="Notification">
                 <div class="Notification__icon">
                   <span>99</span>
                 </div>
-              </div>
+              </div> -->
     
               <a href="" class="btn-upgrade"><span>upgrade plan</span></a>
 
@@ -68,23 +90,76 @@
                   </div>
                 </div>
               </div>
-              <div class="Profile">
+              <!-- <div class="Profile">
                 <div class="Profile__icon">
                   <img src="images/icon-profile-avatar.png" alt="">
                   <i></i>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </nav>
+
         <div class="Notification">
             <div class="Notification__icon">
               <span>99</span>
             </div>
-        </div>
-        <div class="Top-info">
-          
+            <div class="Notification-popup">
+              <div class="Notification-popup-wrap">
+                <div class="Notification__title">Notification</div>
+                <div class="Notification__item">
+                  <div class="Notification__item-img">
+                    <img src="images/icon-message.svg" alt="">
+                  </div>
+                  <div class="Notification__item-mess">
+                    <div class="Notification__item-txt">
+                      <strong>Alya</strong> send you a new message
+                    </div>
+                    <div class="Notification__item-days">12 days ago</div>
+                  </div>
+                </div>
+                <div class="Notification__item">
+                  <div class="Notification__item-img">
+                    <img src="images/icon-message.svg" alt="">
+                  </div>
+                  <div class="Notification__item-mess">
+                    <div class="Notification__item-txt">
+                      <strong>Alya</strong> send you a new message
+                    </div>
+                    <div class="Notification__item-days">12 days ago</div>
+                  </div>
+                </div>
+                <div class="Notification__item">
+                  <div class="Notification__item-img">
+                    <img src="images/icon-message.svg" alt="">
+                  </div>
+                  <div class="Notification__item-mess">
+                    <div class="Notification__item-txt">
+                      <strong>Alya</strong> send you a new message
+                    </div>
+                    <div class="Notification__item-days">12 days ago</div>
+                  </div>
+                </div>
+                <div class="Notification__item">
+                  <div class="Notification__item-img">
+                    <img src="images/icon-check2.svg" alt="">
+                  </div>
+                  <div class="Notification__item-mess">
+                    <div class="Notification__item-txt">
+                      Your request for matching women's profiles has been completed.
+                    </div>
+                    <div class="Notification__item-days">13 days ago</div>
+                  </div>
+                </div>
+              </div>
+              <div class="Notification-popup-foot">
+                Mark all is read
+              </div>
 
+            </div>
+        </div>
+
+        <div class="Top-info">
           <a href="" class="btn-upgrade"><span>upgrade plan</span></a>
           
           <div class="Flag">
@@ -108,10 +183,22 @@
           </div>
 
           <div class="Profile">
-            <div class="Profile__icon">
+            <div class="Profile__icon Profile-btn-js">
               <img src="images/icon-profile-avatar.png" alt="">
               <i></i>
             </div>
+            <div class="Profile-popup">
+              <ul class="Profile-popup__menu">
+                <li><a href="">My profile</a></li>
+                <li><a href="">Visitors</a></li>
+                <li><a href="">Favorites</a></li>
+                <li><a href="">My matches</a></li>
+                <li><a href="">Membership</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Logout</a></li>
+              </ul>
+            </div>
+
           </div>
 
         </div>
@@ -121,7 +208,7 @@
     </div>
     <!-- /Top-->
     
-    <div class="ContainerWrap Content-2">
+    <div class="ContainerWrap Content">
       <div class="User">
         <div class="User__top">
           <div class="User__top-left">
@@ -263,15 +350,15 @@
         </div>
         <!-- /.UserInfo -->
       
+      </div>
+      <!-- /ContainerWrap-->
     </div>
-    <!-- /ContainerWrap-->
-    
 
   </div>
   <!-- /Main-->
 
   <footer>
-    <div class="ContainerWrap ">
+    <div class="ContainerWrap">
        <div class="FootWrap">
         <div class="FootWrap__logo">
           <a href="">Confideline</a>
@@ -319,6 +406,7 @@
     </div>
   </footer>
 </div>
+<!-- /Wrapper-main-->
 
 
 

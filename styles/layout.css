@@ -340,9 +340,10 @@ header {
 }
 
 .Top-menu ul li a {
+  display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 20px;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
@@ -352,8 +353,14 @@ header {
   text-decoration: underline;
 }
 
+.Top-menu ul ul {
+  display: none;
+  padding: 15px 0 0 15px;
+}
+
 .dropDownMenu.active {
   left: 0px;
+  width: 230px;
 }
 
 .dropDownMenu.active .Smenu__close {
@@ -2269,6 +2276,7 @@ a.creat-link:hover {
 .Notification {
   margin-right: 20px;
   margin-top: 11px;
+  position: relative;
 }
 
 .Notification__icon {
@@ -2299,7 +2307,95 @@ a.creat-link:hover {
   padding: 2px;
 }
 
+.Notification__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.Notification__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #000;
+}
+
+.Notification__item-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 16px;
+  flex: 0 0 16px;
+  margin-right: 20px;
+}
+
+.Notification__item-mess {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.Notification__item-txt {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  margin-bottom: 3px;
+}
+
+.Notification__item-txt strong {
+  font-weight: bold;
+}
+
+.Notification__item-days {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  color: #000;
+}
+
+.Notification-popup {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 40px;
+  margin-left: -140px;
+  width: 320px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+}
+
+.Notification-popup-wrap {
+  padding: 25px 25px 0 25px;
+}
+
+.Notification-popup-foot {
+  background: #F9F9F9;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  color: #CB0FE0;
+  padding: 5px 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.Notification-popup-foot:hover {
+  cursor: pointer;
+}
+
 .Profile {
+  position: relative;
   margin-left: 15px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 38px;
@@ -2308,6 +2404,7 @@ a.creat-link:hover {
 
 .Profile__icon {
   position: relative;
+  width: 38px;
 }
 
 .Profile__icon:hover {
@@ -2382,6 +2479,86 @@ a.creat-link:hover {
 
 .checkbox input:checked + .checkbox__text:after {
   left: 15px;
+}
+
+.li-profile {
+  display: none;
+}
+
+.profile-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile-item:hover {
+  cursor: pointer;
+}
+
+.profile-item .Profile__icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 38px;
+  flex: 0 0 38px;
+  margin-right: 10px;
+}
+
+.profile-item__name {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.profile-item .arrow-down {
+  background: url("../images/arrow3.svg") center top no-repeat;
+  position: absolute;
+  top: 19px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+}
+
+.Profile-popup {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 182px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+}
+
+.Profile-popup__menu {
+  padding: 15px;
+}
+
+.Profile-popup__menu li {
+  margin-bottom: 0;
+}
+
+.Profile-popup__menu li a {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  padding: 10px 15px;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+.Profile-popup__menu li a:hover {
+  background: #F9F9F9;
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -2476,11 +2653,11 @@ a.creat-link:hover {
 
   .Top-menu ul {
     display: block;
-    padding: 20px 50px 0;
+    padding: 20px 10px 0 25px;
   }
 
-  .Top-menu ul li {
-    height: 24px;
+  .Top-menu ul li:not(:last-child) {
+    margin-right: 0px;
   }
 
   .dropDownMenu {
@@ -2496,6 +2673,7 @@ a.creat-link:hover {
     -webkit-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
     transition: all 0.25s linear;
+    overflow: auto;
   }
 
   #hamburger {
@@ -2875,6 +3053,10 @@ a.creat-link:hover {
     margin-right: 0;
     margin-bottom: 20px;
   }
+
+  .li-profile {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -3036,6 +3218,15 @@ a.creat-link:hover {
   .AutoTranslate {
     width: 100%;
   }
+
+  .Notification {
+    position: static;
+  }
+
+  .Notification-popup {
+    margin-left: 0px;
+    top: 60px;
+  }
 }
 
 @media only screen and (max-width: 440px) {
@@ -3048,5 +3239,11 @@ a.creat-link:hover {
   .UserInfo__item {
     width: 100%;
     margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .Notification-popup {
+    width: 300px;
   }
 }

@@ -26,6 +26,7 @@ $(function () {
         });
         return false;
     });
+
     $('.Flag-js').on('click', function (e) {
         if ($('.Flag__dropdown').hasClass('active')) {
             $(".selectlink-js").html($(this).html());
@@ -34,6 +35,7 @@ $(function () {
             $(".selectlink-js").removeClass('active');
         }
     });
+
     $(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".selectlink-js"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
@@ -200,4 +202,49 @@ $(function () {
       
       });
 
+    // клик по иконке уведомления
+      $('.Notification__icon').click(function (e) {
+        $('.Notification-popup').fadeToggle();
+    });
+    // если клик не по иконке уведомления то закрываем 
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".Notification__icon"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0  ) // и не по его дочерним элементам
+        { 
+            $('.Notification-popup').slideUp(200);
+		}	
+	});
+
+    // клик по иконке профиля
+    $('.Profile-btn-js').click(function (e) {
+        $('.Profile-popup').fadeToggle();
+    });
+    // если клик не по иконке профиля то закрываем 
+    $(document).mouseup(function (e){ 
+		var div = $(".Profile-btn-js"); 
+		if (!div.is(e.target) && div.has(e.target).length === 0  ) 
+        { 
+            $('.Profile-popup').slideUp(200);
+		}	
+	});
+
+    
+
+
+    $(".accordeon > li > span").on('click', function (e) {
+        e.preventDefault();
+        var menu = $(this).closest('.accordeon');
+        if (false == $(this).next().is(':visible')) {
+            menu.find('li').removeClass('slide active');
+            menu.find('ul').slideUp();
+        }
+        $(this).next().slideToggle();
+        $(this).parent().addClass('slide');
+    });
+
+
+
+
+//end
 });
