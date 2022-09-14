@@ -27,6 +27,11 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+
+  .HD-main {
+    margin-bottom: 30px;
+  }
+
 }
 
 .Content {
@@ -54,7 +59,6 @@
     @include font800(24px, 33px);
     color: #000;
     text-transform: uppercase;
-
 }
 
 %HD2 {
@@ -1167,6 +1171,7 @@ footer {
     right: 5px;
     font-weight: normal;
     opacity: 0.6;
+    font-size: 0;
 
     &:hover {
       opacity: 1;
@@ -1959,6 +1964,9 @@ a.creat-link {
       width: 100%; 
       justify-content: start;
     }
+    .SendMessage, .BoxGift {
+      margin-right: 15px;
+    }
 
     .AutoTranslate, .SendMessage, .BoxGift, .Like {
       @include max-s(1024px){
@@ -2058,10 +2066,10 @@ a.creat-link {
 }
 
 .AutoTranslate {
-  margin-right: 15px;
   height: 44px;
   display: flex;
   align-items: center;
+  margin-right: 15px;
 
   @include max-s(500px){
     width: 100%;
@@ -2070,11 +2078,11 @@ a.creat-link {
 }
 
 .SendMessage {
-  margin-right: 15px;
+
 }
 
 .BoxGift {
-  margin-right: 15px;
+
 }
 
 .btn-gift {
@@ -2524,6 +2532,163 @@ a.creat-link {
 }
 
 
+.Visitor {
+  margin-bottom: 150px;
+}
+
+.Visitor-topbar {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+
+		&__info {
+      width: 49%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+
+		&__sort {
+      width: 49%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: end;
+    }
+}
+
+.infoblock {
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 0 15px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+
+  span {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+    @include font700(14px,16px);
+    color: #000;
+    
+    &::before {
+      content:' ';
+      display:block;
+      margin-right: 13px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &.likes {
+    border-color: #FF6056;
+    span {
+      &::before {
+        background: url('../images/icon-heart-red.svg') center top no-repeat; 
+      }
+    }
+
+  }
+  &.visit {
+    border-color: #FFCE4F;
+    span {
+      &::before {
+        background: url('../images/icon-eye.svg') center top no-repeat; 
+      }
+    }
+  }
+}
+
+.TAbSort {
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  height: 40px;
+  @include font400(14px,16px);
+  color: #000;
+
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+
+  &.active {
+    cursor: pointer;
+    border: 1px solid #5E5E5E;
+    background: #5E5E5E;
+    @include font700(14px,16px);
+    color: #fff;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #5E5E5E;
+    background: #5E5E5E;
+    color: #fff;
+  }
+
+}
+
+.Visitor-users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.User-item {
+  border-radius: 5;
+  width: 263px;
+  background: url("../images/patern.png"), 
+              radial-gradient(26.25% 99.93% at 61.22% 52.91%, #FFFFFF 0%, #FFFFFF 100%);
+  box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 45px;
+  margin: 0;
+
+		&__foto {
+		  margin-bottom: 20px;
+		}
+
+		&__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .SendMessage {
+        margin-right: 15px;
+      }
+    }
+
+		&__nicname {
+      text-align: center;
+      @include font500(18px,22px);
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+		&__daysee {
+      background: #F9F9F9;
+      text-align: center;
+      padding: 10px;
+      @include font300(12px,16px);
+      color: #000;
+    }
+}
 
 
 
