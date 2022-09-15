@@ -325,7 +325,7 @@ header {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  margin: 23px 15px 0;
+  margin: 23px 0px 0;
 }
 
 .Top-menu ul {
@@ -1280,6 +1280,43 @@ footer {
   padding-bottom: 15px;
 }
 
+.Modal-white {
+  max-width: 441px;
+}
+
+.Modal-white__wrap {
+  padding: 20px;
+}
+
+.Modal-white__hd {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.Modal-white .btn {
+  margin: 0 auto;
+}
+
+.Interest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.Interest__item {
+  margin: 0 5px 5px;
+}
+
 .Contacts {
   padding: 0 0 90px;
   display: -webkit-box;
@@ -2105,6 +2142,7 @@ a.creat-link:hover {
 }
 
 .btn-gift {
+  display: block;
   width: 44px;
   height: 44px;
   background: #5E5E5E url("../images/icon-gift.svg") center center no-repeat;
@@ -2576,7 +2614,7 @@ a.creat-link:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .Visitor-topbar__info {
@@ -2620,6 +2658,7 @@ a.creat-link:hover {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .infoblock:not(:last-child) {
@@ -2685,6 +2724,7 @@ a.creat-link:hover {
   font-size: 14px;
   line-height: 16px;
   color: #000;
+  margin-bottom: 10px;
 }
 
 .TAbSort:not(:last-child) {
@@ -2714,21 +2754,20 @@ a.creat-link:hover {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -26px;
 }
 
 .User-item {
-  border-radius: 5;
+  border-radius: 5px;
   width: 263px;
-  background: url("../images/patern.png"), -o-radial-gradient(61.22% 52.91%, 26.25% 99.93%, #FFFFFF 0%, #FFFFFF 100%);
-  background: url("../images/patern.png"), radial-gradient(26.25% 99.93% at 61.22% 52.91%, #FFFFFF 0%, #FFFFFF 100%);
+  background: url("../images/patern.png");
   -webkit-box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin-bottom: 45px;
-  margin: 0;
+  margin: 0 25px 40px;
 }
 
 .User-item__foto {
@@ -3266,6 +3305,10 @@ a.creat-link:hover {
   .li-profile {
     display: block;
   }
+
+  .Visitor {
+    margin-bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -3346,6 +3389,47 @@ a.creat-link:hover {
     font-weight: 400;
     font-size: 25px;
     line-height: 32px;
+  }
+
+  .Visitor-topbar__info {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .Visitor-topbar__sort {
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .infoblock {
+    margin: 0 10px 10px;
+  }
+
+  .infoblock:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .TAbSort {
+    margin: 0 10px 10px;
+  }
+
+  .TAbSort:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .Visitor-users {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .User-item {
+    margin: 0 10px 30px;
   }
 }
 
@@ -3448,6 +3532,12 @@ a.creat-link:hover {
   .UserInfo__item {
     width: 100%;
     margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .User-item {
+    margin: 0 0px 30px;
   }
 }
 

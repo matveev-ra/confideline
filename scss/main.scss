@@ -124,7 +124,7 @@ header {
 
 .Top-menu {
   flex: 1 1 auto;
-  margin: 23px 15px 0 ;
+  margin: 23px 0px 0 ;
 
   @include max-s(1100px)  {
     order:1;
@@ -1148,7 +1148,7 @@ footer {
 
 
 
-.Modal{
+.Modal {
   max-width: 660px;
   margin: 0px auto;
   position: relative;
@@ -1219,6 +1219,36 @@ footer {
     }
   }
 
+}
+
+.Modal-white {
+    max-width: 441px;
+
+  &__wrap {
+    padding: 20px;
+  }
+
+  &__hd {
+    text-align: center;
+    @include font500(18px,21px);
+    color: #000;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+}
+
+.Interest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  &__item {
+    margin: 0 5px 5px;
+  }
 }
 
 
@@ -2086,6 +2116,7 @@ a.creat-link {
 }
 
 .btn-gift {
+  display: block;
   width: 44px;
   height: 44px;
   background: #5E5E5E url('../images/icon-gift.svg') center center no-repeat; 
@@ -2534,6 +2565,10 @@ a.creat-link {
 
 .Visitor {
   margin-bottom: 150px;
+
+  @include max-s(768px){
+    margin-bottom: 40px;
+  }
 }
 
 .Visitor-topbar {
@@ -2541,7 +2576,7 @@ a.creat-link {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
 
 		&__info {
@@ -2549,6 +2584,11 @@ a.creat-link {
       display: flex;
       flex-wrap: wrap;
       justify-content: start;
+
+      @include max-s(600px){
+        width: 100%; 
+        justify-content: center;
+      }
     }
 
 		&__sort {
@@ -2556,6 +2596,10 @@ a.creat-link {
       display: flex;
       flex-wrap: wrap;
       justify-content: end;
+      @include max-s(600px){
+        width: 100%; 
+        justify-content: center;
+      }
     }
 }
 
@@ -2569,9 +2613,18 @@ a.creat-link {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+
+  @include max-s(600px){
+    margin: 0 10px 10px;  
+   }
 
   &:not(:last-child) {
     margin-right: 13px;
+
+    @include max-s(600px){
+     margin-right: 10px;  
+    }
   }
 
   span {
@@ -2621,9 +2674,18 @@ a.creat-link {
   height: 40px;
   @include font400(14px,16px);
   color: #000;
+  margin-bottom: 10px;
+
+  @include max-s(600px){
+   margin: 0 10px 10px;
+  }
 
   &:not(:last-child) {
     margin-right: 13px;
+
+    @include max-s(600px){
+      margin-right: 10px; 
+    }
   }
 
   &.active {
@@ -2646,18 +2708,30 @@ a.creat-link {
 .Visitor-users {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0 -26px;
+
+  @include max-s(600px){
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 .User-item {
-  border-radius: 5;
+  border-radius: 5px;
   width: 263px;
-  background: url("../images/patern.png"), 
-              radial-gradient(26.25% 99.93% at 61.22% 52.91%, #FFFFFF 0%, #FFFFFF 100%);
+  background: url("../images/patern.png");
   box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  margin-bottom: 45px;
-  margin: 0;
+  margin: 0 25px 40px ;
+
+  @include max-s(600px){
+    margin: 0 10px 30px ;
+  }
+
+  @include max-s(400px){
+    margin: 0 0px 30px ;
+  }
 
 		&__foto {
 		  margin-bottom: 20px;
