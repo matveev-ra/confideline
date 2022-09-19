@@ -163,7 +163,9 @@ $(function () {
         e.preventDefault();
         var href = $(this).attr('href');
         $(href).bPopup({
-                closeClass:'close'
+                closeClass:'close',
+               positionStyle: 'fixed'
+                //follow: [false, false], //x, y
             });
     });
 
@@ -243,7 +245,16 @@ $(function () {
         $(this).parent().addClass('slide');
     });
 
-
+    $('#slider-ui').slider({
+		range: true,
+		min: 18,
+		max: 100,
+		values: ['0', '100'],
+		slide: function(event, ui) {
+			$('#min').text(ui.values[0]);
+			$('#max').text(ui.values[1]);
+		}
+	});
 
 
 //end

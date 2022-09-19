@@ -1212,7 +1212,7 @@ footer {
 
 .Modal {
   max-width: 660px;
-  margin: 0px auto;
+  margin: 5px auto;
   position: relative;
   background: url("../images/bg-patern.jpg") left top repeat;
   border-radius: 5px;
@@ -1281,11 +1281,11 @@ footer {
 }
 
 .Modal-white {
-  max-width: 441px;
+  width: 441px;
 }
 
 .Modal-white__wrap {
-  padding: 20px;
+  padding: 20px 30px 40px;
 }
 
 .Modal-white__hd {
@@ -2748,7 +2748,7 @@ a.creat-link:hover {
   color: #fff;
 }
 
-.Visitor-users {
+.Content-users {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2807,6 +2807,202 @@ a.creat-link:hover {
   font-size: 12px;
   line-height: 16px;
   color: #000;
+}
+
+.SearchUser {
+  margin-bottom: 150px;
+}
+
+.SearchUser__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.SearchUser .Content-users {
+  margin-bottom: 60px;
+}
+
+.Filtr {
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+}
+
+.Filtr a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.Filtr a::before {
+  content: ' ';
+  display: block;
+  margin-right: 13px;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icon-filtr.svg") center top no-repeat;
+}
+
+.Filtr a span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+}
+
+.PageNavi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.PageNavi a {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #E7E7E7;
+  border-radius: 50%;
+  margin: 0 3px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 32px;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+}
+
+.PageNavi a:hover {
+  background: -o-linear-gradient(356.3deg, #9001A0 -10.98%, #CB0FE0 108.23%);
+  background: linear-gradient(93.7deg, #9001A0 -10.98%, #CB0FE0 108.23%);
+  border: 1px solid #E7E7E7;
+  color: #fff;
+}
+
+a.PageNavi__active-page {
+  background: -o-linear-gradient(356.3deg, #9001A0 -10.98%, #CB0FE0 108.23%);
+  background: linear-gradient(93.7deg, #9001A0 -10.98%, #CB0FE0 108.23%);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 32px;
+  color: #fff;
+}
+
+.PageNavi__dots span {
+  display: block;
+  position: relative;
+  width: 6px;
+  height: 6px;
+  background: #E6E6E6;
+  border-radius: 50%;
+  margin: 0 13px;
+}
+
+.PageNavi__dots span::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: #E6E6E6;
+  border-radius: 50%;
+}
+
+.PageNavi__dots span::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  background: #E6E6E6;
+  border-radius: 50%;
+}
+
+.Field {
+  margin-bottom: 15px;
+}
+
+.Field input {
+  width: 100%;
+  height: 50px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0 15px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+}
+
+.Field-select {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+}
+
+.Field-select select {
+  width: 100%;
+  height: 42px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 0 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #131313;
+}
+
+.Field-select label {
+  position: absolute;
+  top: 5px;
+  left: 19px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+}
+
+.Field-years .Age-ui {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.Field-years #slider-ui {
+  margin-bottom: 35px;
 }
 
 /*# sourceMappingURL=layout.css.map */
@@ -3309,6 +3505,10 @@ a.creat-link:hover {
   .Visitor {
     margin-bottom: 40px;
   }
+
+  .SearchUser {
+    margin-bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -3335,7 +3535,6 @@ a.creat-link:hover {
 @media only screen and (max-width: 650px) {
   .Modal {
     width: 90%;
-    margin: 0 auto;
   }
 
   .Modal__wrap {
@@ -3421,7 +3620,7 @@ a.creat-link:hover {
     margin-right: 10px;
   }
 
-  .Visitor-users {
+  .Content-users {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -3544,5 +3743,12 @@ a.creat-link:hover {
 @media only screen and (max-width: 350px) {
   .Notification-popup {
     width: 300px;
+  }
+}
+
+@media all and (max-height: 530px) {
+  .Modal-white {
+    overflow: auto;
+    bottom: 0px;
   }
 }
