@@ -2968,7 +2968,8 @@ a.PageNavi__active-page {
   padding-right: 10px;
 }
 
-.Field-select select {
+.Field-select select,
+.Field-select input {
   width: 100%;
   height: 42px;
   background: #FFFFFF;
@@ -2982,7 +2983,55 @@ a.PageNavi__active-page {
   color: #131313;
 }
 
+.Field-select input {
+  padding: 0  0 0 15px;
+}
+
+.Field-select input:focus {
+  outline: none;
+}
+
+.Field-select input[type=date]::-webkit-calendar-picker-indicator {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
 .Field-select label {
+  position: absolute;
+  top: 5px;
+  left: 19px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+}
+
+.Field-date_ {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.Field-date_ input {
+  width: 100%;
+  height: 42px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 0  0 0 15px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #131313;
+}
+
+.Field-date_ input:focus {
+  outline: none;
+}
+
+.Field-date_ label {
   position: absolute;
   top: 5px;
   left: 19px;
@@ -3003,6 +3052,184 @@ a.PageNavi__active-page {
 
 .Field-years #slider-ui {
   margin-bottom: 35px;
+}
+
+.SettingsTabs__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.SettingsTabs__tab {
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  height: 40px;
+  text-align: center;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000;
+}
+
+.SettingsTabs__tab:not(:last-child) {
+  margin-right: 10px;
+}
+
+.SettingsTabs__tab.active,
+.SettingsTabs__tab:hover {
+  background: #5E5E5E;
+  color: #fff;
+  cursor: pointer;
+}
+
+.MyProfile {
+  max-width: 750px;
+}
+
+.MyProfile__hd {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+  margin-bottom: 23px;
+}
+
+.MyProfileSec1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.MyProfileSec1__foto {
+  border: 1px dashed #808080;
+  border-radius: 12px;
+  width: 166px;
+  height: 166px;
+  margin-right: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.MyProfileSec1__foto img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.MyProfileSec1__foto-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000;
+  text-align: center;
+}
+
+.MyProfileSec1__status {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+}
+
+.MyProfileSec1__status-text {
+  position: relative;
+}
+
+.MyProfileSec1__status-text textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px 58px 10px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.MyProfileSec1__status-text span {
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000;
+}
+
+.MyProfileSec2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.MyProfileSec2__item {
+  width: 48%;
+}
+
+.MyProfileSec3 {
+  width: 100%;
+}
+
+.MyProfileSec3__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.MyProfileSec3__item {
+  width: 48%;
+}
+
+.MyProfileSec3__item textarea {
+  width: 100%;
+  height: 115px;
+  padding: 10px 58px 10px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=layout.css.map */
