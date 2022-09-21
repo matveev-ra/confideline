@@ -177,11 +177,13 @@ $(function () {
                 // on focus add class active to label
                 $this.focus(function () {
                     $this.next().addClass("active");
+                    $this.addClass("active");
                 });
                 //on blur check field and remove class if needed
                 $this.blur(function () {
                     if ($this.val() === '' || $this.val() === 'blank') {
                         $this.next().removeClass();
+                        $this.removeClass();
                     }
                 });
             });
@@ -255,6 +257,27 @@ $(function () {
 			$('#max').text(ui.values[1]);
 		}
 	});
+
+
+    $("#Tabs-js .SettingsTabs__head .SettingsTabs__tab").on("click", function(){
+        var tabs = $("#Tabs-js .SettingsTabs__tab")
+            cont = $("#Tabs-js .SettingsTabs__cont");
+      // Удаляем классы active
+        tabs.removeClass("active");
+        cont.removeClass("active");
+      // Добавляем классы active
+        $(this).addClass("active");
+        cont.eq($(this).index()).addClass("active");
+        return false;
+    });
+
+//клик по кнопкк плюс - кторый инициирует клк по полю input type="file"
+    $("#plus-download").click(function(e){
+        // поле не заполнено;
+        e.preventDefault();
+        $('#input__file').trigger('click');
+        
+    });
 
 
 //end

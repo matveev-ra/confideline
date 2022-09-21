@@ -213,9 +213,9 @@
     <div class="ContainerWrap Content">
       
       <div class="Settings">
-        <div class="HD-main">Search</div>
+        <div class="HD-main">profile & settings</div>
 
-        <div class="Settings__wrap">
+        <div class="Settings__wrap" id="Tabs-js">
           <div class="SettingsTabs__head">
             <div class="SettingsTabs__tab active">My profile</div>
             <div class="SettingsTabs__tab">Settings</div>
@@ -225,13 +225,31 @@
           </div>
 
           <div class="SettingsTabs__body">
-            <div class="SettingsTabs__cont">
+            <div class="SettingsTabs__cont active">
               <div class="MyProfile">
 
                 <div class="MyProfileSec1">
                   <div class="MyProfileSec1__foto">
-                    <img src="images/icon-plus.svg" alt="">
-                    <div class="MyProfileSec1__foto-text"> Upload Profile Photo </div>
+                    <div class="MyProfileSec1__foto-drop">
+                      <div class="MyProfileSec1__foto-plus" id="plus-download"></div>
+                      <input name="files" id="input__file" type="file"  multiple="">
+                      <div class="MyProfileSec1__foto-text"> Upload Profile Photo </div>
+                    </div>
+                  </div>
+                  <div class="MyProfileSec1__status">
+                    <div class="MyProfile__hd">Update status</div>
+                    <div class="MyProfileSec1__status-text">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="Type your text"></textarea>
+                      <span>0/200</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- /MyProfileSec1-->
+
+                <div class="MyProfileSec1" >
+                  <div class="MyProfileSec1__foto">
+                    <img src="images/foto-profile.png" alt="">
+                    <div class="close-foto"></div>
                   </div>
                   <div class="MyProfileSec1__status">
                     <div class="MyProfile__hd">Update status</div>
@@ -248,7 +266,8 @@
                   <div class="MyProfileSec2__item">
                     <div class="MyProfile__hd">Geography</div>
                     <div class="Field">
-                      <input type="text" placeholder="Location">
+                      <input type="text" class="topLabel">
+                      <label for="">Location</label>
                     </div>
                     <div class="Field-select">
                       <label>Your native language</label>
@@ -311,11 +330,8 @@
 
                   </div>
                   
-
-
                 </div>
                 <!-- /.MyProfileSec2 -->
-
 
                 <div class="MyProfileSec3">
                   <div class="MyProfile__hd">General information</div>
@@ -333,13 +349,15 @@
                       </div>
                       <div class="Field-select">
                         <label>Date of birth</label>
-                        <input type="date" placeholder="Location">
+                        <input type="date" >
                       </div>
                       <div class="Field">
-                        <input type="text" placeholder="Height (Cm)">
+                        <input type="text" class="topLabel">
+                        <label for="">Height (Cm)</label>
                       </div>
                       <div class="Field">
-                        <input type="text" placeholder="Weight (Kg)">
+                        <input type="text" class="topLabel">
+                        <label for="">Weight (Kg)</label>
                       </div>
                     </div>
 
@@ -354,22 +372,125 @@
 
                 <div class="MyProfileSec4">
                   <div class="MyProfile__hd">Interests</div>
-                  <div class="MyProfileSec4__tag">
+                  <div class="Tags">
                     <div class="tag">Shopping<i></i></div>
                     <div class="tag">Travel<i></i></div>
                     <div class="tag">IT Industry<i></i></div>
                     <div class="plus"></div>
                   </div>
+                  <div class="MyProfileSec4__text">
+                    Enter your interests and press enter
+                  </div>
 
                 </div>
                 <!-- /.MyProfileSec4 -->
 
+                <button class="btn">save changes</button>
+
               </div>
+              <!-- /MyProfile-->
             </div>
-            <div class="SettingsTabs__cont"></div>
-            <div class="SettingsTabs__cont"></div>
-            <div class="SettingsTabs__cont"></div>
-            <div class="SettingsTabs__cont"></div>
+
+            <div class="SettingsTabs__cont">
+              <div class="mySettings">
+                <div class="Field">
+                  <input type="text" class="topLabel">
+                  <label>Username</label>
+                </div>
+                <div class="Field">
+                  <input type="text" class="topLabel">
+                  <label>New password</label>
+                </div>
+                <div class="Field">
+                  <input type="text" class="topLabel">
+                  <label>Confirm password</label>
+                </div>
+
+                <div class="Field-select">
+                  <label>Interface language</label>
+                  <select name="select2">
+                    <option value="">English</option>
+                    <option value="Englsh">item select1</option>
+                    <option value="Spanish">item select2</option>
+                    <option value="German">item select3</option>
+                  </select>
+                </div>
+              </div>
+              <!-- /mySettings-->
+              
+              <button class="btn">save changes</button>
+
+            </div>
+
+            <div class="SettingsTabs__cont">
+              <div class="myNotification">
+                <div class="Field">
+                  <input type="text" class="topLabel active" value="karlsmelyj@gmail.com">
+                  <label class="active">E-mail address</label>
+                </div>
+                <label class="checkB">
+                  <input id="Agree" type="checkbox" name="checkbox" value="">
+                  <div class="checkB__text"><span>Notify of new messages</span></div>
+                </label>
+                <label class="checkB">
+                  <input id="Agree" type="checkbox" name="checkbox" value="Согласие" checked="checked">
+                  <div class="checkB__text"><span>Notification will be sent once your translation is finished</span></div>
+                </label>
+              </div>
+
+              <button class="btn">save changes</button>
+
+            </div>
+
+            <div class="SettingsTabs__cont">
+              
+                  <h2>What do you prefer and who are you looking for?</h2>
+
+                  <p>
+                    To help you find a person to whom you would like to say “good morning” every day we have
+                    developed a unique selection system. Knowing what you like and value, what lifestyle you prefer,
+                    what kind of person you are looking for, we will attract your attention to those people, whose
+                    interests and views are close to yours and who you might like.
+                  </p>
+
+                  <p>
+                    Please answer the questions of the tests which we have worked out specifically for you. Do all the
+                    tests one after another and their results will help you to find new people. We wish you only pleasant
+                    acquaintances!
+                  </p>
+
+                  <p><i>Questionnaires can be filled only once, so please fill them in very attentively!</i></p>
+
+                  <p><strong>Questionnaires to fill:</strong></p>
+
+                  <ul>
+                    <li><a href="">Relationship values</a> (Not filled in)</li>
+                    <li><a href="">Type of temperament</a> (Not filled in)</li>
+                    <li><a href="">Communication style</a> (Not filled in )</li>
+                    <li><a href="">Attitude to new acquaintances</a> (Not filled in )</li>
+                  </ul>
+
+
+            </div>
+            <div class="SettingsTabs__cont">
+
+              <div class="myAutotranslate">
+                <div class="MyProfile__hd">I'd like to receive the translated letters of this member automatically</div>
+                <label class="checkB">
+                  <input id="Agree" type="checkbox" name="checkbox" value="">
+                  <div class="checkB__text"><span>TatianaE</span></div>
+                </label>
+                <label class="checkB">
+                  <input id="Agree" type="checkbox" name="checkbox" value="" checked="checked">
+                  <div class="checkB__text"><span>ArielWhite</span></div>
+                </label>
+                <label class="checkB">
+                  <input id="Agree" type="checkbox" name="checkbox" value="" >
+                  <div class="checkB__text"><span>Marisha</span></div>
+                </label>
+              </div>
+              <button class="btn">save changes</button>
+            </div>
           </div>
 
         </div>

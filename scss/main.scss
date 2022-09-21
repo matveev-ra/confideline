@@ -2495,6 +2495,56 @@ a.creat-link {
 	// box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
 }
 
+.checkB {
+  margin-bottom: 15px;
+  display: block;
+
+
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+  }
+
+  &__text {
+    position: relative;
+    padding: 0 0 0 34px;
+    cursor: pointer;
+
+
+    span {
+      @include font400(14px, 19px);
+      color: #000;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background: url("../images/checkbox.png") 0 0px no-repeat;
+    }
+
+  }
+
+  input:focus+.checkB__text:before {
+    background: url("../images/checkbox.png") 0 0px no-repeat;
+  }
+
+  input:checked+.checkB__text:before {
+    background: url("../images/checkbox.png") 0 -16px no-repeat;
+  }
+
+}
+
+
+
+
+
+
 .li-profile {
   display: none;
 
@@ -2896,26 +2946,45 @@ a.creat-link {
 }
 
 
-
 .Field {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
   margin-bottom: 15px;
 
-  & input {
-    width: 100%;
-    height: 50px;
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    padding: 0 15px;
-    
-    @include font300(14px,16px);
-    color: #000;
-  }
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      border:none;
+      border-radius: 5px;
+      margin-top: 0;
+      padding: 13px 15px 0;
+      @include font700(14px,16px);
+      color: #000;
 
+      // &.active {
+      //   background: rgba(19, 19, 19, 0.05);
+      // }
+    }
 
-
+    label {
+      position: absolute;
+      top: 14px;
+      left: 15px;
+      @include font400(14px,16px);
+      color: #757575;
+      transition: all 0.3s;
+      
+      &.active {
+          top: 5px;
+          @include font400(12px,14px);
+      }
+    }
 
 }
+
+
 .Field-select {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -2925,19 +2994,26 @@ a.creat-link {
 
    & select, & input {
     width: 100%;
-    height: 42px;
+    height: 48px;
     background: #FFFFFF;
     border:none;
     border-radius: 5px;
-    margin-top: 6px;
-    padding: 0 15px;
+    padding: 13px 15px 0;
     
     @include font700(14px,18px);
     color: #131313;
   }
 
+  & select {
+    option {
+      @include font700(14px,18px);
+      color: #131313;
+    }
+  }
+
   & input {
-    padding: 0  0 0 15px;
+    padding: 13px  0 0 15px;
+
     &:focus {
       outline: none;
     }
@@ -2945,45 +3021,8 @@ a.creat-link {
 
   & input[type=date]::-webkit-calendar-picker-indicator {
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
-
-  label {
-    position: absolute;
-    top: 5px;
-    left: 19px;
-    @include font400(12px,14px);
-    color: #757575;
-  }
-}
-
-.Field-date_ {
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  margin-bottom: 15px;
-
-   & input {
-    width: 100%;
-    height: 42px;
-    background: #FFFFFF;
-    border:none;
-    border-radius: 5px;
-    margin-top: 6px;
-    padding: 0  0 0 15px;
-    
-    @include font700(14px,18px);
-    color: #131313;
-
-    &:focus {
-      outline: none;
-    }
-    
-  }
-
-  
-
-
 
   label {
     position: absolute;
@@ -3009,13 +3048,15 @@ a.creat-link {
 
 }
 
-
 .Settings {
+  margin-bottom: 150px;
+
+  @include max-s(768px){
+    margin-bottom: 40px; 
+  }
 
   &__wrap {}
 }
-
-
 
 .SettingsTabs {
 
@@ -3024,7 +3065,7 @@ a.creat-link {
     flex-wrap: wrap;
     justify-content: start;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
   }
 
   &__tab {
@@ -3033,6 +3074,7 @@ a.creat-link {
     height: 40px;
     text-align: center;
     padding: 0 15px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     @include font400(14px,16px);
@@ -3047,14 +3089,16 @@ a.creat-link {
       color: #fff;
       cursor: pointer;
     }
-
-
-
   }
 
   &__body {}
 
-  &__cont {}
+  &__cont {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .MyProfile {
@@ -3071,25 +3115,67 @@ a.creat-link {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   &__foto {
-    border: 1px dashed #808080;
-    border-radius: 12px;
     width: 166px;
     height: 166px;
     margin-right: 32px;
+    position: relative;
+
+    .close-foto {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      background: url('../images/close3.svg') center top no-repeat;
+      width: 28px;
+      height: 28px; 
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+
+    @include max-s(500px){
+       margin: 0 auto 20px;
+    }
+  }
+
+
+  
+  &__foto-drop {
+    border: 1px dashed #808080;
+    border-radius: 12px;
+    width: 100%;
+    height: 166px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
+
+    input {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      width: 10px;
+    }
   }
-  &__foto img {
-    width: 50px;
-    height: 50px;
+
+  &__foto-plus {
+    background: url('../images/icon-plus.svg') center top no-repeat;
+    width: 41px;
+    height: 41px; 
     margin-bottom: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
+
+
+  
   &__foto-text {
    @include font400(14px,19px);
    color: #000;
@@ -3098,6 +3184,10 @@ a.creat-link {
 
   &__status {
     flex: 1 1;
+
+    @include max-s(500px){
+      flex: 1 1 100%; 
+    }
   }
 
   &__status-text {
@@ -3129,15 +3219,26 @@ a.creat-link {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 15px;
+
+  @include max-s(500px){
+    margin-bottom: 0px;
+  }
 
   &__item {
     width: 48%;
+
+    @include max-s(500px){
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
 
 .MyProfileSec3 {
   
   width: 100%;
+  margin-bottom: 30px;
 
   &__wrap {
     display: flex;
@@ -3148,6 +3249,10 @@ a.creat-link {
 
   &__item {
     width: 48%;
+
+    @include max-s(500px){
+      width: 100%;
+    }
 
     textarea {
       width: 100%;
@@ -3161,10 +3266,72 @@ a.creat-link {
   }
 }
 
+.Tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 20px;
+  
 
+  .tag {
+    position: relative;
+    border: 1px solid #000000;
+    border-radius: 33px;
+    padding: 5px 10px;
+    @include font400(14px, 16px);
+    color: #000;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+    i {
+      background: url('../images/close2.svg') center top no-repeat;
+      width: 18px;
+      height: 18px; 
+      position: absolute;
+      top: -10px;
+      right: -8px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
 
+  .plus {
+    background: url('../images/icon-plus-mini.svg') center top no-repeat;
+    width: 20px;
+    height: 20px; 
+    margin: 0 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
+}
 
+.MyProfileSec4 {
+  &__text {
+    @include font400(14px,16px);
+    color: #000;
+    margin-bottom: 40px;
+  }
+}
+
+.mySettings {
+  max-width: 360px;
+  margin-bottom: 40px;
+}
+
+.myNotification {
+  margin-bottom: 40px;
+
+  .Field {
+    max-width: 360px;
+  }
+}
+
+.myAutotranslate {
+  margin-bottom: 40px;
+}
 
 
 
