@@ -247,16 +247,16 @@ $(function () {
         $(this).parent().addClass('slide');
     });
 
-    $('#slider-ui').slider({
-		range: true,
-		min: 18,
-		max: 100,
-		values: ['0', '100'],
-		slide: function(event, ui) {
-			$('#min').text(ui.values[0]);
-			$('#max').text(ui.values[1]);
-		}
-	});
+    // $("#slider-ui").slider({
+	// 	range: true,
+	// 	min: 18,
+	// 	max: 100,
+	// 	values: ['0', '100'],
+	// 	slide: function(event, ui) {
+	// 		$('#min').text(ui.values[0]);
+	// 		$('#max').text(ui.values[1]);
+	// 	}
+	// });
 
 
     $("#Tabs-js .SettingsTabs__head .SettingsTabs__tab").on("click", function(){
@@ -275,10 +275,18 @@ $(function () {
     $("#plus-download").click(function(e){
         // поле не заполнено;
         e.preventDefault();
+        //console.log("click");
         $('#input__file').trigger('click');
         
     });
 
+ $("#plus-download2").click(function(e){
+        // поле не заполнено;
+        e.preventDefault();
+        //console.log("click");
+        $('#input__file2').trigger('click');
+        
+    });
 
 //end
 });
