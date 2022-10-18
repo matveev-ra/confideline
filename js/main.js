@@ -288,5 +288,37 @@ $(function () {
         
     });
 
+    
+
+
+
+        $(document).ready(function () {
+
+            $(".ChatSlider").slick({
+                infinite: true,
+                dots: false,
+                vertical: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        vertical: false
+                      }
+                    },
+                    {
+                        breakpoint: 540,
+                        settings: {
+                            vertical: false,
+                            slidesToShow: 2
+                        }
+                      }
+                  ]
+              });
+
+        });
+
+
 //end
 });

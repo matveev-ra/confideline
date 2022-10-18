@@ -326,9 +326,6 @@ header {
   }
 }
 
-
-
-
 .Top-info {
   flex: 0 1 auto;
   display: flex;
@@ -669,24 +666,24 @@ header {
 
 
 
-  .img-hand-phone {
-    position: absolute;
-    bottom: 202px;
-    right: 0;
-    @include max-s(1200px)  {
-      bottom: 136px;
-      right: -36px;
-    }
-    @include max-s(1018px) {
-      position: static;
-    display: flex;
-    justify-content: end;
-    transform: translate(15px, 0px);
-    }
+.img-hand-phone {
+  position: absolute;
+  bottom: 202px;
+  right: 0;
+  @include max-s(1200px)  {
+    bottom: 136px;
+    right: -36px;
   }
+  @include max-s(1018px) {
+    position: static;
+  display: flex;
+  justify-content: end;
+  transform: translate(15px, 0px);
+  }
+}
  
 
-  .HowWork {
+.HowWork {
     position: absolute;
     top: 84px;
     left: 153px;
@@ -1053,6 +1050,7 @@ footer {
   flex: 0 0 auto;
   background: rgba(196, 196, 196,  0.1);  
 }
+
 .FootWrap {
   display: flex;
   flex-wrap: wrap;
@@ -2122,6 +2120,12 @@ a.creat-link {
       }
      }
   }
+  &__name-user2 {
+    .User__name-avatar {
+      margin-right: 0;
+    }
+  }
+
 }
 
 .AutoTranslate {
@@ -3736,16 +3740,291 @@ a.creat-link {
     }
 }
 
+.Chat {
+
+  &-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}
 
 
+.ChatWrap {
+  padding: 40px;
+  box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 65px;
+
+  @include max-s(992px){
+    padding: 20px;
+  }
+}
+
+.ChatBlock {
+    flex:1 1;
+    margin-right: 20px;
+
+    @include max-s(768px){
+      flex:1 1 100%;
+      margin-right: 0;
+      order:2;
+    }
+}
+
+.ChatBlock-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @include max-s(992px){
+
+    margin-bottom: 15px; 
+  }
+
+  .Backpage {
+    margin-right: 30px;
+    margin-bottom: 0;
+
+    @include max-s(992px){
+      width: 100%;
+      margin-bottom: 15px; 
+    }
+  }
+}
 
 
+.ChatTabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: start;
+
+		&__Tab {
+      background: #FFFFFF;
+      border: 1px solid #ACACAC;
+      border-radius: 27px;
+      @include font400(14px,34px);
+      color: #000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px;
+      margin-right: 10px;
+
+      @include max-s(992px){
+        margin-bottom: 10px; 
+      }
+      
+
+      i {
+        width: 16px;
+        height: 16px; 
+        margin-right: 5px;
+      }
+    }
+}
+
+.icon-inbox {
+  background: url('../images/icon-tab-inbox.svg') center top no-repeat;
+  width: 16px;
+  height: 16px; 
+}
+.icon-sent {
+  background: url('../images/icon-tab-sent.svg') center top no-repeat; 
+}
+.icon-drafts {
+  background: url('../images/icon-tab-drafts.svg') center top no-repeat; 
+}
+.icon-history {
+  background: url('../images/icon-tab-history.svg') center top no-repeat; 
+}
+
+.ChatSlider {
+  flex: 0 0 230px;
+  // border: 1px solid red;
+  // height: 485px;
+
+  @include max-s(768px){
+    order:1 ;
+    flex: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__item{
+    margin: 5px;
+    img {
+      // height: 189px;
+    }
+  }
+}
 
 
+.ChatMess {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 25px;
+
+      @include max-s(540px){
+          flex-wrap: wrap;
+      }
+
+  &__cont {
+    flex: 1 1 70%;
+
+      @include max-s(540px){
+        flex: 1 1 80%;
+        order:2;
+        margin-bottom: 10px; 
+      }
+  }
+
+  &__cont-text {
+    background: #F7F7F7;
+    border-radius: 8px;
+    padding: 20px;
+    @include font400(14px,18px);
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  &__user {
+    flex: 0 0 25px;
+    margin: 0 20px 0 20px;
+
+    @include max-s(540px){
+      order:1;
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &__info {
+    flex: 0 0 120px;
+
+    @include max-s(540px){
+      flex: 1 1 100%;
+      order:2;
+      
+    }
+
+    .btn-mini2 {
+      @include max-s(540px){
+        width: 200px;
+        margin: 0 auto; 
+      }
+    }
+  }
+
+  &__info-data {
+    text-align: right;
+    margin-bottom: 20px;
+
+    @include max-s(540px){
+      margin-bottom: 0px;
+    }
+
+    span {
+      display: block;
+      @include font400(12px, 16px);
+      color: #000;
+      opacity: 0.5;
+
+      @include max-s(540px){
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.ChatMess-left {
+  flex-direction:row-reverse;
+ 
+  .ChatMess__cont-text {
+    background: linear-gradient(93.7deg, #FFCE4F -10.98%, #FFB800 108.23%);
+  }
+  .ChatMess__info-data {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
 
 
+.ChatMessAdd {
 
+  &__text {
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 20px;
 
+    textarea {
+      width: 100%;
+      max-width: 870px;
+      min-height: 100px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+
+    .textIcon {
+      margin-right: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.Countword {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  @include font400(12px,16px);
+  color: #000;
+}
+
+.Microfon {
+  margin-right: 20px;
+  &:hover {
+    cursor: pointer;
+  }
+  
+}
 
 
 
