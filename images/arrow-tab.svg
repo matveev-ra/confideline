@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+		<style>
+		    use#black{ fill: #000; }
+            use#grey{ fill: #000; opacity: 0.2; }
+		</style>
+	</defs>
+
+	<symbol viewBox="0 0 5 9" id="symbol_discount">
+		<path style="fill: inherit; fill-rule: evenodd;"   d="M0.361328 7.24609L3.23242 4.375L0.361328 1.50391L1.24023 0.625L4.99023 4.375L1.24023 8.125L0.361328 7.24609Z" />
+	</symbol>
+
+	<use id="grey" xlink:href="#symbol_discount" width="5" height="9" x="0" y="0"></use>
+	<use id="black" xlink:href="#symbol_discount" width="5" height="9" x="10" y="0"></use>
+
+	<view id="grey" width="5" height="9" viewBox="0 0 5 9" />
+    <view id="black" width="5" height="9" viewBox="10 0 5 9" />
+
+
+</svg>

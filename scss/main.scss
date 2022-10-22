@@ -3755,15 +3755,18 @@ a.creat-link {
   padding: 40px;
   box-shadow: 0px 14px 80px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: start;
   margin-bottom: 65px;
 
   @include max-s(992px){
     padding: 20px;
   }
+}
+
+.ChatWrap-in {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .ChatBlock {
@@ -3779,22 +3782,23 @@ a.creat-link {
 
 .ChatBlock-top {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: start;
   align-items: center;
   margin-bottom: 30px;
 
-  @include max-s(992px){
-
+  @include max-s(768px){
+    flex-wrap: wrap;
     margin-bottom: 15px; 
   }
 
   .Backpage {
     margin-right: 30px;
     margin-bottom: 0;
+    flex: 0 0 70px;
 
-    @include max-s(992px){
-      width: 100%;
+    @include max-s(768px){
+      flex: 1 1 100%;
       margin-bottom: 15px; 
     }
   }
@@ -3802,10 +3806,19 @@ a.creat-link {
 
 
 .ChatTabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-content: start;
+  position: relative;
+
+  @include max-s(768px){
+    width: 90% !important;
+    margin: 0 auto; 
+  }
+
+  .owl-stage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-content: start;
+  }
 
 		&__Tab {
       background: #FFFFFF;
@@ -3818,12 +3831,7 @@ a.creat-link {
       justify-content: center;
       align-items: center;
       padding: 0 15px;
-      margin-right: 10px;
-
-      @include max-s(992px){
-        margin-bottom: 10px; 
-      }
-      
+      margin:0 5px;
 
       i {
         width: 16px;
@@ -4026,7 +4034,22 @@ a.creat-link {
   
 }
 
+// .Slider-tab {
+//   width: 90%;
 
+//   @include max-s(768px){
+//     width: 100%;
+//   }
+
+//   .slick-list {
+//     @include max-s(768px){
+      
+//       width: 90%;
+//       margin: 0 auto;
+//     }
+    
+//   }
+// }
 
 
 

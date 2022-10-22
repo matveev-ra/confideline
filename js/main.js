@@ -120,7 +120,7 @@ $(function () {
         nav: true,
         items: 5,
         dots: true,
-        navClass: ['slick-prev-t', 'slick-next-t'],
+        navClass: ['owl-prev-t', 'owl-next-t'],
         responsiveClass: true,
         responsive: {
             320: {
@@ -316,6 +316,20 @@ $(function () {
                       }
                   ]
               });
+
+
+
+              $('.Slider-tab').owlCarousel({
+                //margin: 10,
+                loop: false,
+                autoWidth: true,
+                items: 1,
+                nav:true,
+                dots: false,
+                navClass: ['owl-prev-tab', 'owl-next-tab'],
+        
+            });
+
 
         });
 
