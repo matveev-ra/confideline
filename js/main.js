@@ -69,6 +69,7 @@ $(function () {
                 
             
     });
+
     $(".Cantry__dropdown .Flag__select").on("click", function(){
         var tabs = $(".Cantry__dropdown .Flag__select")
             cont = $(".Contacts__wrap-tab .Cantry-tab");
@@ -192,7 +193,7 @@ $(function () {
         topLabel(".topLabel");
     })(jQuery);
 
-    $("a[href^='#']").click(function(e){
+    $(".dropDownMenu ul li a[href^='#']").click(function(e){
         e.preventDefault();
         var id  = $(this).attr('href'), //забираем идентификатор бока с атрибута href
             top = $(id).offset().top; //узнаем высоту от начала страницы до блока на который ссылается якорь
@@ -224,6 +225,7 @@ $(function () {
     $('.Profile-btn-js').click(function (e) {
         $('.Profile-popup').fadeToggle();
     });
+
     // если клик не по иконке профиля то закрываем 
     $(document).mouseup(function (e){ 
 		var div = $(".Profile-btn-js"); 
@@ -247,16 +249,16 @@ $(function () {
         $(this).parent().addClass('slide');
     });
 
-    // $("#slider-ui").slider({
-	// 	range: true,
-	// 	min: 18,
-	// 	max: 100,
-	// 	values: ['0', '100'],
-	// 	slide: function(event, ui) {
-	// 		$('#min').text(ui.values[0]);
-	// 		$('#max').text(ui.values[1]);
-	// 	}
-	// });
+    $("#slider-ui").slider({
+		range: true,
+		min: 18,
+		max: 100,
+		values: ['0', '100'],
+		slide: function(event, ui) {
+			$('#min').text(ui.values[0]);
+			$('#max').text(ui.values[1]);
+		}
+	});
 
 
     $("#Tabs-js .SettingsTabs__head .SettingsTabs__tab").on("click", function(){
@@ -285,53 +287,63 @@ $(function () {
         e.preventDefault();
         //console.log("click");
         $('#input__file2').trigger('click');
-        
+ });
+
+
+$(".ChatSlider").slick({
+    infinite: true,
+    dots: false,
+    vertical: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+            vertical: false
+            }
+        },
+        {
+            breakpoint: 540,
+            settings: {
+                vertical: false,
+                slidesToShow: 2
+            }
+            }
+        ]
+});
+
+$('.Slider-tab').owlCarousel({
+    loop: false,
+    autoWidth: true,
+    items: 1,
+    nav:true,
+    dots: false,
+    navClass: ['owl-prev-tab', 'owl-next-tab'],
+
+});
+
+$('.Flag-js_').on('click', function (e) {
+    if ($('.Flag__dropdown').hasClass('active')) {
+        $(".selectlink-js").html($(this).html());
+        $('.Flag .Flag__dropdown').slideUp(200);
+        $('.Flag .Flag__dropdown').removeClass('active');
+        $(".selectlink-js").removeClass('active');
+    } else {
+
+    }
+});
+
+$('.Hidden-title span').click(function (e) {
+        $('.Hidden-text').fadeToggle();
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).text("Открыть оригинал");
+        } else {
+            $(this).text("Скрыть оригинал");
+        }
     });
-
-    
-
-
-
-        $(document).ready(function () {
-
-            $(".ChatSlider").slick({
-                infinite: true,
-                dots: false,
-                vertical: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                      breakpoint: 768,
-                      settings: {
-                        vertical: false
-                      }
-                    },
-                    {
-                        breakpoint: 540,
-                        settings: {
-                            vertical: false,
-                            slidesToShow: 2
-                        }
-                      }
-                  ]
-              });
-
-
-
-              $('.Slider-tab').owlCarousel({
-                //margin: 10,
-                loop: false,
-                autoWidth: true,
-                items: 1,
-                nav:true,
-                dots: false,
-                navClass: ['owl-prev-tab', 'owl-next-tab'],
-        
-            });
-
-
-        });
+      
 
 
 //end

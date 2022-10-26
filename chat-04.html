@@ -3,7 +3,7 @@
 <html lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Поиск</title>
+	<title>Chat-04</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="Keywords" content=""/>
 	<meta name="Description" content=""/>
@@ -11,7 +11,9 @@
 	<link rel="stylesheet" href="styles/layout.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/owl.carousel.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/fancybox.css" type="text/css"/>
-	<link rel="stylesheet" href="styles/jquery-ui.min.css" type="text/css"/>
+	<link rel="stylesheet" href="styles/fancybox.css" type="text/css"/>
+	<link rel="stylesheet" href="styles/slick.css" type="text/css"/>
+
 
  
 </head>
@@ -211,138 +213,129 @@
     <!-- /Top-->
     
     <div class="ContainerWrap Content">
-      
-      <div class="SearchUser">
-        <div class="SearchUser__top">
-          <div class="HD-main">Search</div>
-          <div class="Filtr">
-            <a href="#ModalFiltr" class="bpopup"><span>Filtr</span></a>
+      <div class="Chat">
+        
+        <div class="Chat-top">
+          <div class="User__name">
+            <div class="User__name-avatar"><img src="images/img-avatar2.png" alt=""></div>
+            <div class="User__name-name">AlexDemo</div>
+          </div>
+          <div class="User__name User__name-user2">
+            <div class="User__name-name">Ariel</div>
+            <div class="User__name-avatar"><img src="images/img-avatar.png" alt=""></div>
           </div>
         </div>
-        
-        <div class="Content-users">
 
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user1.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
-              </div>
-              <div class="BoxGift">
-                <a href="#ModalInterest" class="btn-gift bpopup"></a>
-              </div>
+       
+
+        <div class="ChatWrap">
+          <div class="ChatBlock-top">
+
+            <div class="Backpage"><a href="">Back</a></div>
+  
+            <div class="ChatTabs Slider-tab owl-carousel">
+                <div class="ChatTabs__Tab"><i class="icon-inbox"></i>Inbox</div>
+                <div class="ChatTabs__Tab"><i class="icon-sent"></i>Sent</div>
+                <div class="ChatTabs__Tab"><i class="icon-drafts"></i>Drafts</div>
+                <div class="ChatTabs__Tab"><i class="icon-history"></i>History</div>
             </div>
-            <div class="User-item__nicname">@Leroc4ka</div>
-            <div class="User-item__daysee"><span>Russia</span></div>
+  
           </div>
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user2.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
+          <div class="ChatWrap-in">
+            <div class="ChatBlock">
+            
+              <div class="ChatMess">
+                <div class="ChatMess__cont">
+                  <div class="ChatMess__cont-in">
+                    Сдержанный дизайн этого комода навеян скандинавскими мотивами. Классическая прямоугольная форма, высокие округлые ножки из массива березы, сочетание древесной фактуры корпуса с матовыми фасадами – выглядит очень стильно!
+                  </div>
+                </div>
+                <div class="ChatMess__user"><img src="images/img-avatar.png" alt=""></div>
+                <div class="ChatMess__info">
+                  <div class="ChatMess__info-data">
+                    <span>11.01.22  |  10:57:04</span>
+                    <span>64 word(s)</span>
+                    <span>#773142</span>
+                  </div>
+                </div>
               </div>
-              <div class="BoxGift">
-                <a href="#ModalInterest" class="btn-gift bpopup"></a>
+              <div class="ChatMess ChatMess-left">
+                <div class="ChatMess__cont">
+                  <div class="ChatMess__cont-text">
+                    <audio src="audio.mp3" controls="controls" loop="loop"></audio>
+                    <strong>Translation:</strong> Despite the modest dimensions, "Nordic" is quite roomy. The design includes two drawers, one hinged and two open compartments. For ease of use, the facades are equipped with overhead rectangular handles. Chest of drawers in a pleasant color, does not hurt the eyes. There are no questions about the quality either, they assembled it themselves in half an hour.
+                    
+                  </div>
+                  <div class="ChatMess__cont-foto">
+                    <a data-fancybox="gallery2" href="images/img-message1.png""><img src="images/img-message1.png" alt=""></a>
+                    <a data-fancybox="gallery2" href="images/img-message2.png""><img src="images/img-message2.png" alt=""></a>
+                    <a data-fancybox="gallery2" href="images/img-message2.png""><img src="images/img-message3.png" alt=""></a>
+                  </div>
+                </div>
+                <div class="ChatMess__user"><img src="images/img-avatar2.png" alt=""></div>
+                <div class="ChatMess__info">
+                  <div class="ChatMess__info-data">
+                    <span>11.01.22  |  10:57:04</span>
+                    <span>64 word(s)</span>
+                    <span>#773142</span>
+                  </div>
+                  <a href="#ModalTraslate" class="btn-mini2 bpopup">translate</a>
+                </div>
               </div>
-            </div>
-            <div class="User-item__nicname">@AlinaB</div>
-            <div class="User-item__daysee"><span>Spain</span></div>
-          </div>
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user3.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
-              </div>
-              <div class="BoxGift">
-                <a href="#ModalInterest" class="btn-gift bpopup"></a>
-              </div>
-            </div>
-            <div class="User-item__nicname">@Marisia</div>
-            <div class="User-item__daysee"><span>Greece</span></div>
-          </div>
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user4.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
-              </div>
-              <div class="BoxGift">
-                <a href="#ModalInterest" class="btn-gift bpopup"></a>
-              </div>
-            </div>
-            <div class="User-item__nicname">@Gerda</div>
-            <div class="User-item__daysee"><span>Indonesia</span></div>
-          </div>
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user5.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
-              </div>
-              <div class="BoxGift">
-                <a href="#ModalInterest" class="btn-gift bpopup"></a>
-              </div>
-            </div>
-            <div class="User-item__nicname">@Leroc4ka</div>
-            <div class="User-item__daysee"><span>Finland</span></div>
-          </div>
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user6.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
-              </div>
-              <div class="BoxGift">
-                <a href="#ModalInterest" class="btn-gift bpopup"></a>
-              </div>
-            </div>
-            <div class="User-item__nicname">@Leroc4ka</div>
-            <div class="User-item__daysee"><span>Russia</span></div>
-          </div>
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user7.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
-              </div>
-              <div class="BoxGift">
-                <a href="#ModalInterest" class="btn-gift bpopup"></a>
+              <div class="ChatMessAdd">
+                <div class="ChatMessAdd__text">
+                  <textarea name="" placeholder="Type your text"></textarea>
+                  <div class="Countword">Message lenght 0 Word(s)</div>
+                </div>
+                <div class="ChatMessAdd__bottom AudioB">
+                  <div class="VoiceRec">
+                    <div class="VoiceRec__item">
+                      <div class="VoiceRec__close"></div>
+                      <div class="VoiceRec__track"><audio src="audio.mp3" controls="controls" loop="loop"></audio></div>
+                    </div>
+                    <div class="VoiceRec__item">
+                      <div class="VoiceRec__close"></div>
+                      <div class="VoiceRec__track"><audio src="audio.mp3" controls="controls" loop="loop"></audio></div>
+                    </div>
+                  </div>
+                  <div class="ChatMessAdd__right">
+                    <div class="Microfon"><a href="" class=""><img src="images/icon-microfon.svg" alt=""></a></div>
+                    <div class="btn">send message</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="User-item__nicname">@Leroc4ka</div>
-            <div class="User-item__daysee"><span>Russia</span></div>
-          </div>
-          <div class="User-item">
-            <div class="User-item__foto"><img src="images/visit-user8.png" alt=""></div>
-            <div class="User-item__buttons">
-              <div class="SendMessage">
-                <a href="" class="btn-2">send message</a>
+            <div class="ChatSlider">
+              <div class="ChatSlider__item">
+                <a data-fancybox="gallery" href="images/img-chatslider-01.png"><img src="images/img-chatslider-01.png"  alt=""></a>
               </div>
-              <div class="BoxGift">
-                  <a href="#ModalInterest" class="btn-gift bpopup"></a>
+              <div class="ChatSlider__item">
+                <a data-fancybox="gallery" href="images/img-chatslider-02.png"><img src="images/img-chatslider-02.png"  alt=""></a>
+              </div>
+              <div class="ChatSlider__item">
+                <a data-fancybox="gallery" href="images/img-chatslider-03.png"><img src="images/img-chatslider-03.png"  alt=""></a>
+              </div>
+              <div class="ChatSlider__item">
+                <a data-fancybox="gallery" href="images/img-chatslider-01.png"><img src="images/img-chatslider-01.png"  alt=""></a>
+              </div>
+              <div class="ChatSlider__item">
+                <a data-fancybox="gallery" href="images/img-chatslider-02.png"><img src="images/img-chatslider-02.png"  alt=""></a>
               </div>
             </div>
-            <div class="User-item__nicname">@Leroc4ka</div>
-            <div class="User-item__daysee"><span>2 days ago</span></div>
           </div>
           
         </div>
+     
+        
+        
 
-        <div class="PageNavi">
-          <a href="" class="PageNavi__active-page">1</a>
-          <a href="">2</a>
-          <a href="">3</a>
-          <a href="">4</a>
-          <div class="PageNavi__dots"><span></span></div>
-          <a href="" class="last-page">65</a>
-        </div>
+        
 
+        
+      
       </div>
-      <!-- /SearchUser-->
-
+      <!-- /Membership-->
     </div>
-    <!-- /ContainerWrap-->
 
   </div>
   <!-- /Main-->
@@ -400,15 +393,30 @@
 
 
 <!--MODAL //////////////////  - форма  ////////////////////-->
-<div class="Modal Modal-white" id="ModalFiltr" style=" display: none;">
+<div class="Modal Modal-white" id="ModalTraslate" style=" display: none;">
   <div class="Modalclose close">&#215;</div>
   <div class="Modal-white__wrap">
-    <div class="Modal-white__hd">Filter</div>
-    <div class="Filtr-field">
-      <div class="Field">
-        <input type="text" class="topLabel">
-        <label>Username</label>
+    <div class="Modal-white__hd"> Translate text</div>
+
+    <div class="WordCount">
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Balance <a href="">(Пополнить баланс)</a></div>
+        <div class="WordCount__item-numb">€123.21</div>
       </div>
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Your personat discount</div>
+        <div class="WordCount__item-numb">0%</div>
+      </div>
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Message length <a href="">(Стоимость)</a></div>
+        <div class="WordCount__item-numb">251 word(s)</div>
+      </div>
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Type of translation</div>
+        <div class="WordCount__item-numb">Basic</div>
+      </div>
+    </div>
+    <div class="Filtr-field">
       <div class="Field-select">
         <label>Country</label>
         <select name="select1" >
@@ -427,26 +435,84 @@
           <option value="German">German</option>
         </select>
       </div>
+    </div>
+
+    <div class="Price-translate">
+      <div class="text">Price </div>
+      <div class="numb">€3.21</div>
+    </div>
+    <div class="Agree">
+      <label class="checkB">
+        <input id="Agree" type="checkbox" name="checkbox" value="">
+        <div class="checkB__text"><span>I'd like to receive the translated letters of this member automatically</span></div>
+      </label>
+    </div>
+
+    <button class="btn">translate</button>
+    
+  </div>
+ 
+ 
+</div>
+<!-- /MODAL /////////////////////////////////////////////////////-->
+
+<!--MODAL //////////////////  - форма  ////////////////////-->
+<div class="Modal Modal-white" id="ModalTraslateVoice" style=" display: none;">
+  <div class="Modalclose close">&#215;</div>
+  <div class="Modal-white__wrap">
+    <div class="Modal-white__hd"> Translate voice message</div>
+
+    <div class="WordCount">
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Balance <a href="">(Пополнить баланс)</a></div>
+        <div class="WordCount__item-numb">€123.21</div>
+      </div>
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Your personat discount</div>
+        <div class="WordCount__item-numb">0%</div>
+      </div>
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Message length <a href="">(Стоимость)</a></div>
+        <div class="WordCount__item-numb">86 seconds</div>
+      </div>
+      <div class="WordCount__item">
+        <div class="WordCount__item-text">Type of translation</div>
+        <div class="WordCount__item-numb">Basic</div>
+      </div>
+    </div>
+    <div class="Filtr-field">
       <div class="Field-select">
-        <label>Order by</label>
-        <select name="select3" >
-          <option value="">Newest</option>
+        <label>Country</label>
+        <select name="select1" >
+          <option value="">Choose from list</option>
+          <option value="Englsh">list1</option>
+          <option value="Spanish">Spanish</option>
+          <option value="German">German</option>
+        </select>
+      </div>
+      <div class="Field-select">
+        <label>What are you searching?</label>
+        <select name="select2">
+          <option value="">Choose from list</option>
           <option value="Englsh">Englsh</option>
           <option value="Spanish">Spanish</option>
           <option value="German">German</option>
         </select>
       </div>
-
-      <div class="Field-years">
-        <div class="Age-ui">Age (<span id="min">18</span>-<span id="max">100</span> years old)</div>
-        <div id="slider-ui"></div>
-      </div>
-
-
-
     </div>
 
-    <button class="btn">search</button>
+    <div class="Price-translate">
+      <div class="text">Price </div>
+      <div class="numb">€3.21</div>
+    </div>
+    <div class="Agree">
+      <label class="checkB">
+        <input id="Agree" type="checkbox" name="checkbox" value="">
+        <div class="checkB__text"><span>I'd like to receive the translated letters of this member automatically</span></div>
+      </label>
+    </div>
+
+    <button class="btn">translate</button>
     
   </div>
  
@@ -455,53 +521,17 @@
 <!-- /MODAL /////////////////////////////////////////////////////-->
 
 
-<!--MODAL //////////////////  - форма  ////////////////////-->
-<div class="Modal Modal-white" id="ModalInterest" style=" display: none;">
-  <div class="Modalclose close">&#215;</div>
-  <div class="Modal-white__wrap">
-    <div class="Modal-white__hd">Show interest</div>
-    <div class="Interest">
-      <div class="Interest__item"><img src="images/img-interest1.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest2.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest3.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest4.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest5.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest6.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest7.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest8.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest9.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest10.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest11.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest12.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest13.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest14.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest15.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest16.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest17.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest18.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest19.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest20.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest21.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest22.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest23.png" alt=""></div>
-      <div class="Interest__item"><img src="images/img-interest24.png" alt=""></div>
-    </div>
 
-    <button class="btn">continue</button>
-    
-  </div>
- 
- 
-</div>
-<!-- /MODAL /////////////////////////////////////////////////////-->
 
 <!-- JS -->
 
-<script src="js/jquery-3.6.0.min.js"></script>
+<!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/jquery.bpopup.js"></script>
 <script src="js/fancybox.umd.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
 
 

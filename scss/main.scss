@@ -1229,6 +1229,10 @@ footer {
 
   &__wrap {
     padding: 20px 30px 40px;
+
+    @include max-s(768px){
+      padding: 10px 10px 20px;
+    }
   }
 
   &__hd {
@@ -3767,11 +3771,17 @@ a.creat-link {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
+
+  &.ChatWrap-in-Empty {
+    align-items: stretch;
+  }
 }
 
 .ChatBlock {
     flex:1 1;
     margin-right: 20px;
+    display: flex;
+    flex-direction: column;
 
     @include max-s(768px){
       flex:1 1 100%;
@@ -3804,6 +3814,21 @@ a.creat-link {
   }
 }
 
+.ChatEmpty {
+  flex:1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+
+  img {}
+  
+  &__text {
+    @include font800(24px,33px);
+    color: #e6e6e6;
+  }
+}
 
 .ChatTabs {
   position: relative;
@@ -3832,6 +3857,10 @@ a.creat-link {
       align-items: center;
       padding: 0 15px;
       margin:0 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
 
       i {
         width: 16px;
@@ -3892,7 +3921,7 @@ a.creat-link {
     flex: 1 1 70%;
 
       @include max-s(540px){
-        flex: 1 1 80%;
+        flex: 1 1 100%;
         order:2;
         margin-bottom: 10px; 
       }
@@ -3905,6 +3934,17 @@ a.creat-link {
     @include font400(14px,18px);
     color: #000;
     margin-bottom: 15px;
+
+    audio {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &.cont-img {
+      background: none !important;
+      padding: 0px !important;
+    }
+
   }
 
   &__user {
@@ -3914,6 +3954,7 @@ a.creat-link {
     @include max-s(540px){
       order:1;
     }
+
 
     img {
       width: 25px;
@@ -3994,12 +4035,20 @@ a.creat-link {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    &.AudioB {
+      align-items: start;
+    }
   }
 
   &__icon {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
+
+    @include max-s(768px){
+       margin-bottom: 20px;
+    }
+
 
     .textIcon {
       margin-right: 10px;
@@ -4034,27 +4083,119 @@ a.creat-link {
   
 }
 
-// .Slider-tab {
-//   width: 90%;
+.WordCount {
+  margin-bottom: 20px;
 
-//   @include max-s(768px){
-//     width: 100%;
-//   }
+  &__item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;    
+  }
 
-//   .slick-list {
-//     @include max-s(768px){
-      
-//       width: 90%;
-//       margin: 0 auto;
-//     }
-    
-//   }
-// }
+  &__item-text {
+    @include font400(12px,16px);
+    color: #000;
+    margin-right: 10px;
+
+    a {
+      color: #CB0FE0;
+      @include font700(14px,18px);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__item-numb {
+      @include font700(14px,18px);
+      color: #000;
+      text-align: right;
+  }
+}
+
+.Price-translate {
+  border-top: 1px dashed #999;
+  border-bottom: 1px dashed #999;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  @include font700(14px,18px);
+  color: #000;
+}
+
+.Agree {
+  margin-bottom: 15px;
+}
+
+.Hidden-traslate {
+  margin-top: 10px;
+}
+
+.Hidden-title {
+  @include font500(12px,16px);
+  color: #CB0FE0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  span { 
+    margin-right: 20px;
+  }
+
+  &::after {
+    content:' ';
+    display:block;
+    border-bottom: 1px dashed #CB0FE0;
+    flex:1 1;
 
 
+  }
+}
 
+.Hidden-text {
+margin-top: 15px;
+}
 
+.VoiceRec {
+  flex: 0 1 65%;
 
+  @include max-s(992px){
+    flex: 0 1 100%;
+  }
+  
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__close {
+    flex: 0 0 16px;
+    background: url('../images/close-audio.svg') center top no-repeat; 
+    height: 16px;
+    margin-right: 15px;
+
+  }
+
+  &__track {
+    flex: 1 1;
+    audio {
+      width: 100%;
+    }
+  }
+}
 
 
 
