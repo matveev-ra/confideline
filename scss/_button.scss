@@ -138,3 +138,35 @@
   }
 }
 
+.btn-delete {
+  width: 159px;
+  height: 36px;
+  background: linear-gradient(37.71deg, #FF6056 6.17%, #FD3F61 94.94%);
+  border-radius: 27px;
+  transition: all 0.5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    @include font400(14px,16px);
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    &::before {
+      content:' ';
+      background: url('../images/icon-basket2.svg') center top no-repeat;
+      width: 12px;
+      height: 14px; 
+      margin-right: 5px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transition: all 0.5s linear;
+    box-shadow: 0px 4px 7px #fda09a;
+  }
+}

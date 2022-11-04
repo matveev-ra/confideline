@@ -230,6 +230,58 @@ a.btn-upgrade:hover {
   box-shadow: 0px 13px 30px #FFB800;
 }
 
+.btn-delete {
+  width: 159px;
+  height: 36px;
+  background: -o-linear-gradient(52.29deg, #FF6056 6.17%, #FD3F61 94.94%);
+  background: linear-gradient(37.71deg, #FF6056 6.17%, #FD3F61 94.94%);
+  border-radius: 27px;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.btn-delete span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.btn-delete span::before {
+  content: ' ';
+  background: url("../images/icon-basket2.svg") center top no-repeat;
+  width: 12px;
+  height: 14px;
+  margin-right: 5px;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-box-shadow: 0px 4px 7px #fda09a;
+  box-shadow: 0px 4px 7px #fda09a;
+}
+
 .Wrapper-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,6 +314,7 @@ a.btn-upgrade:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
 }
 
 .ContainerWrap {
@@ -1341,6 +1394,14 @@ footer {
 
 .Modal-white .btn {
   margin: 0 auto;
+}
+
+.Modal-support__hd {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000;
+  margin-bottom: 20px;
 }
 
 .Interest {
@@ -4406,6 +4467,393 @@ a.PageNavi__active-page {
   width: 100%;
 }
 
+.Ticket {
+  background: #F7F7F7;
+  border-radius: 8px;
+  padding: 10px 20px 20px;
+  margin-bottom: 20px;
+}
+
+.Ticket.Ticket-right {
+  background: -o-linear-gradient(356.3deg, #FFCE4F -10.98%, #FFB800 108.23%);
+  background: linear-gradient(93.7deg, #FFCE4F -10.98%, #FFB800 108.23%);
+  margin-left: 20%;
+}
+
+.Ticket__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Ticket__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Ticket__avatar {
+  margin-right: 20px;
+}
+
+.Ticket__avatar img {
+  width: 25px;
+}
+
+.Ticket__hd {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  margin-right: 15px;
+}
+
+.Ticket__date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #999;
+}
+
+.Ticket__content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.SupportService {
+  background: -o-linear-gradient(356.3deg, #9001A0 -10.98%, #CB0FE0 108.23%);
+  background: linear-gradient(93.7deg, #9001A0 -10.98%, #CB0FE0 108.23%);
+  border-radius: 5px 5px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 208px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.SupportService:hover {
+  cursor: pointer;
+}
+
+.SupportService span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.SupportService i {
+  background: -o-linear-gradient(356.3deg, #FFCE4F -10.98%, #FFB800 108.23%);
+  background: linear-gradient(93.7deg, #FFCE4F -10.98%, #FFB800 108.23%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-style: normal;
+}
+
+.Mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.MUser {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 365px;
+  flex: 0 0 365px;
+  border-right: 1px solid #F1F1F1;
+  padding: 0px 30px 0px 0;
+  margin: 0px 30px 30px 0;
+}
+
+.MUser__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 10px 5px;
+  border-top: 1px solid #F1F1F1;
+}
+
+.MUser__item:hover {
+  background: #F9F9F9;
+  cursor: pointer;
+}
+
+.MUser__item:hover .Mdelete {
+  display: block;
+}
+
+.MUser__item:last-child {
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.MUser__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MUser__avatar {
+  margin-right: 20px;
+}
+
+.MUser__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.MUser__name span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000;
+}
+
+.MUser__name i {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #CB0FE0;
+  font-style: normal;
+}
+
+.MUser__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.MUser__date span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  opacity: 0.5;
+  margin-bottom: 2px;
+}
+
+.Mdelete {
+  display: none;
+  background: url("../images/icon-basket.svg.svg") left top no-repeat;
+  padding-left: 14px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FF6056;
+}
+
+.Mdelete:hover {
+  text-decoration: underline;
+}
+
+.MContent {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+}
+
+.MContent__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.MContent__top .btn-delete {
+  margin-bottom: 20px;
+}
+
+.MContent .ChatTabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-bottom: 20px;
+}
+
+.MContent__item {
+  border-top: 1px solid #F1F1F1;
+  padding: 10px 0;
+}
+
+.MContent__item:last-child {
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.MContent__item .checkB {
+  margin-bottom: 0;
+}
+
+.MContent__itemWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MContent__itemWrap::before {
+  top: 50%;
+  margin-top: -8px;
+}
+
+.MContent__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.MContent__avatar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  margin-right: 15px;
+}
+
+.MContent__avatar img {
+  width: 30px;
+  font-size: 0;
+}
+
+.MContent__avatar .img1 {
+  font-size: 0;
+}
+
+.MContent__avatar .img2 {
+  margin-left: -10px;
+  font-size: 0;
+}
+
+.MContent__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000;
+}
+
+.MContent__date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+  opacity: 0.5;
+}
+
 /*# sourceMappingURL=layout.css.map */
 
 @media only screen and (max-width: 1260px) {
@@ -4683,6 +5131,18 @@ a.PageNavi__active-page {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
+  }
+
+  .MUser {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    padding: 0px 0px 0px 0;
+    margin: 0px 0px 30px 0;
+  }
+
+  .Mdelete {
+    display: block;
   }
 }
 
@@ -5002,6 +5462,10 @@ a.PageNavi__active-page {
   .ChatMessAdd__icon {
     margin-bottom: 20px;
   }
+
+  .MContent .ChatTabs {
+    margin: 0 0 20px 0;
+  }
 }
 
 @media only screen and (max-width: 680px) {
@@ -5288,6 +5752,21 @@ a.PageNavi__active-page {
 
   .MyProfileSec3__item {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Ticket.Ticket-right {
+    margin-left: 0;
+  }
+
+  .MUser__date {
+    width: 100%;
+  }
+
+  .MContent .ChatTabs__Tab {
+    padding: 0 5px;
+    margin: 0 2px;
   }
 }
 

@@ -141,8 +141,6 @@ $(function () {
 
     });
 
-
-
     //работа бургера меню
     $('#hamburger').click(function (e) {
         $('.dropDownMenu').fadeToggle();
@@ -151,12 +149,23 @@ $(function () {
         
     });
     //закрыть боковое меню
-    $('#slide-close, .dropDownMenu ul li a').click(function (e) {
+    // $('#slide-close, .dropDownMenu ul li a').click(function (e) {
+    $('#slide-close').click(function (e) {
         e.preventDefault();
         $('.dropDownMenu').fadeToggle();
         $('#hamburger').toggleClass('active');
         $('.dropDownMenu').toggleClass('active');
         
+    });
+
+    $('.dropDownMenu>ul>li>a').click(function (e) {
+
+        if ($('.dropDownMenu').hasClass('active')) {
+                $('.dropDownMenu').fadeToggle();
+                $('#hamburger').toggleClass('active');
+                $('.dropDownMenu').toggleClass('active');
+                e.preventDefault();
+        }
     });
 
     //подключение модалки
@@ -165,7 +174,17 @@ $(function () {
         var href = $(this).attr('href');
         $(href).bPopup({
                 closeClass:'close',
-               positionStyle: 'fixed'
+                positionStyle: 'fixed'
+                //follow: [false, false], //x, y
+            });
+    });
+
+    $('.SupportService').click(function(e) {
+        e.preventDefault();
+
+        $('#ModalSupport').bPopup({
+                closeClass:'close',
+                positionStyle: 'fixed'
                 //follow: [false, false], //x, y
             });
     });
