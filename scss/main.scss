@@ -2272,6 +2272,7 @@ a.creat-link {
       @include max-s(440px){
         width: 100%;
         margin-right: 0;
+        margin-bottom: 15px;
       }
 
     &:nth-child(1), 
@@ -2282,7 +2283,7 @@ a.creat-link {
 
       @include max-s(768px){
          border-bottom:none;
-         margin-bottom: 0px;
+         margin-bottom: 15px;
       }
     }
   }
@@ -2294,9 +2295,15 @@ a.creat-link {
   }
 
   &__text {
+    margin-bottom: 15px;
     p {
       @include font300(12px,17px);
       color: #000;
+      padding-bottom: 0;
+   
+    }
+    & p + p {
+      padding-top: 15px;
     }
     ul {
       list-style: disc;
@@ -2758,6 +2765,14 @@ a.creat-link {
       width: 16px;
       height: 16px;
     }
+
+    i {
+      font-style: normal;
+
+      @include max-s(440px){
+        display: none; 
+      }
+    }
   }
 
   &.likes {
@@ -3103,9 +3118,13 @@ a.creat-link {
     margin-bottom: 15px;
   }
   #slider-ui {
-    margin-bottom: 35px;
+    width: 96%;
+    margin: 0 auto 35px;
   }
-  
+
+  // .ui-slider-horizontal .ui-slider-handle {
+  //   margin-left: -0.1em;
+  // }
 
 }
 
