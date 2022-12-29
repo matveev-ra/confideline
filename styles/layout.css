@@ -3183,7 +3183,7 @@ a.PageNavi__active-page {
   color: #000;
 }
 
-.Field label {
+.Field .field-name {
   position: absolute;
   top: 14px;
   left: 15px;
@@ -3196,7 +3196,7 @@ a.PageNavi__active-page {
   transition: all 0.3s;
 }
 
-.Field label.active {
+.Field .field-name.active {
   top: 5px;
   font-weight: 400;
   font-size: 12px;
@@ -3208,7 +3208,6 @@ a.PageNavi__active-page {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   margin-bottom: 15px;
-  padding-right: 10px;
 }
 
 .Field-select select,
@@ -3233,7 +3232,7 @@ a.PageNavi__active-page {
 }
 
 .Field-select input {
-  padding: 13px  0 0 15px;
+  padding: 13px 14px 0 15px;
 }
 
 .Field-select input:focus {
@@ -3245,7 +3244,7 @@ a.PageNavi__active-page {
   padding-bottom: 15px;
 }
 
-.Field-select label {
+.Field-select .field-name {
   position: absolute;
   top: 5px;
   left: 19px;
@@ -4866,6 +4865,113 @@ a.PageNavi__active-page {
   line-height: 16px;
   color: #000;
   opacity: 0.5;
+}
+
+.checkselect {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  text-align: left;
+  width: 100%;
+  padding: 13px 0px 0 15px;
+}
+
+.checkselect-control {
+  position: relative;
+  padding: 0 !important;
+}
+
+.checkselect-control select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+  height: 37px;
+  background: transparent;
+}
+
+.checkselect-over {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.checkselect-popup {
+  display: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  border: 1px solid #858282;
+  background: #fff;
+  z-index: 9999;
+  overflow: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-shadow: 0 0px 6px #999;
+  box-shadow: 0 0px 6px #999;
+}
+
+.checkselect label {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 4px 6px 4px 25px;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.1;
+  cursor: pointer;
+}
+
+.checkselect-popup input {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  margin: 0 !important;
+  padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.checkselect-popup label:hover {
+  background: #03a2ff;
+  color: #fff;
+}
+
+.checkselect-popup fieldset {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.checkselect-popup fieldset input {
+  left: 15px;
+}
+
+.checkselect-popup fieldset label {
+  padding-left: 32px;
+}
+
+.checkselect-popup legend {
+  display: block;
+  margin: 0;
+  padding: 5px 8px;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.1;
 }
 
 /*# sourceMappingURL=layout.css.map */

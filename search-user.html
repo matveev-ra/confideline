@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="styles/owl.carousel.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/fancybox.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/jquery-ui.min.css" type="text/css"/>
+	<link rel="stylesheet" href="styles/slimselect.css" type="text/css"/>
 
  
 </head>
@@ -407,20 +408,28 @@
     <div class="Filtr-field">
       <div class="Field">
         <input type="text" class="topLabel">
-        <label>Username</label>
+        <div class="field-name">Username</div>
       </div>
       <div class="Field-select">
-        <label>Country</label>
-        <select name="select1" >
-          <option value="">Choose from list</option>
-          <option value="Englsh">list1</option>
+        <div class="field-name">Country</div>
+
+        <!-- <div class="checkselect">
+          <label><input type="checkbox" name="brands[]" value="1" checked> Englsh</label>
+          <label><input type="checkbox" name="brands[]" value="2"> Spanish</label>
+          <label><input type="checkbox" name="brands[]" value="3"> German</label>
+        </div> -->
+
+        <select name="select1" class="select-single-nosearch" multiple>
+          <!-- <option value="">Choose from list</option> -->
+          <option value="Englsh">Englsh</option>
           <option value="Spanish">Spanish</option>
           <option value="German">German</option>
         </select>
+
       </div>
       <div class="Field-select">
-        <label>What are you searching?</label>
-        <select name="select2">
+        <div class="field-name">What are you searching?</div>
+        <select name="select2" class="select-single-nosearch">
           <option value="">Choose from list</option>
           <option value="Englsh">Englsh</option>
           <option value="Spanish">Spanish</option>
@@ -428,9 +437,9 @@
         </select>
       </div>
       <div class="Field-select">
-        <label>Order by</label>
-        <select name="select3" >
-          <option value="">Newest</option>
+        <div class="field-name">Order by</div>
+        <select name="select3" class="select-single-nosearch">
+          <option value="">Choose from list</option>
           <option value="Englsh">Englsh</option>
           <option value="Spanish">Spanish</option>
           <option value="German">German</option>
@@ -502,6 +511,7 @@
 <script src="js/jquery.bpopup.js"></script>
 <script src="js/fancybox.umd.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="js/slimselect.min.js"></script>
 <script src="js/main.js"></script>
 
 

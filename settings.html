@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="styles/owl.carousel.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/fancybox.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/jquery-ui.min.css" type="text/css"/>
-
+  <link rel="stylesheet" href="styles/slimselect.css" type="text/css"/>
  
 </head>
 <body>
@@ -267,11 +267,11 @@
                     <div class="MyProfile__hd">Geography</div>
                     <div class="Field">
                       <input type="text" class="topLabel">
-                      <label for="">Location</label>
+                      <div class="field-name">Location</div>
                     </div>
                     <div class="Field-select">
-                      <label>Your native language</label>
-                      <select name="select1" >
+                      <div class="field-name">Your native language</div>
+                      <select name="select1" class="select-single-nosearch">
                         <option value="">English</option>
                         <option value="Englsh">item select1</option>
                         <option value="Spanish">item select2</option>
@@ -279,8 +279,8 @@
                       </select>
                     </div>
                     <div class="Field-select">
-                      <label>Good language skills</label>
-                      <select name="select2">
+                      <div class="field-name">Good language skills</div>
+                      <select name="select2" class="select-single-nosearch">
                         <option value="">Doesn't matter</option>
                         <option value="Englsh">item select1</option>
                         <option value="Spanish">item select2</option>
@@ -292,8 +292,8 @@
                   <div class="MyProfileSec2__item">
                     <div class="MyProfile__hd">Social status</div>
                     <div class="Field-select">
-                      <label>Marital status</label>
-                      <select name="select1" >
+                      <div class="field-name">Marital status</div>
+                      <select name="select1" class="select-single-nosearch">
                         <option value="">Choose from list</option>
                         <option value="Englsh">item select1</option>
                         <option value="Spanish">item select2</option>
@@ -301,8 +301,17 @@
                       </select>
                     </div>
                     <div class="Field-select">
-                      <label>What are you searching?</label>
-                      <select name="select2">
+                      <div class="field-name">What are you searching?</div>
+                      <select name="select2" class="select-single-nosearch">
+                        <option value="">Choose from list</option>
+                        <option value="Englsh">item select1</option>
+                        <option value="Spanish">item select2</option>
+                        <option value="German">item select3</option>
+                      </select>
+                    </div>
+                    <div class="Field-select" >
+                      <div class="field-name">Country</div>
+                      <select name="select1" class="select-single-nosearch">
                         <option value="">Choose from list</option>
                         <option value="Englsh">item select1</option>
                         <option value="Spanish">item select2</option>
@@ -310,17 +319,8 @@
                       </select>
                     </div>
                     <div class="Field-select">
-                      <label>Country</label>
-                      <select name="select1" >
-                        <option value="">Choose from list</option>
-                        <option value="Englsh">item select1</option>
-                        <option value="Spanish">item select2</option>
-                        <option value="German">item select3</option>
-                      </select>
-                    </div>
-                    <div class="Field-select">
-                      <label>What are you searching?</label>
-                      <select name="select2">
+                      <div class="field-name">What are you searching?</div>
+                      <select name="select2" class="select-single-nosearch">
                         <option value="">Choose from list</option>
                         <option value="Englsh">item select1</option>
                         <option value="Spanish">item select2</option>
@@ -339,8 +339,8 @@
 
                     <div class="MyProfileSec3__item">
                       <div class="Field-select">
-                        <label>What are you searching?</label>
-                        <select name="select2">
+                        <div class="field-name">What are you searching?</div>
+                        <select name="select2" class="select-single-nosearch">
                           <option value="">Choose from list</option>
                           <option value="Englsh">item select1</option>
                           <option value="Spanish">item select2</option>
@@ -348,16 +348,16 @@
                         </select>
                       </div>
                       <div class="Field-select">
-                        <label>Date of birth</label>
+                        <div class="field-name">Date of birth</div>
                         <input type="date" >
                       </div>
                       <div class="Field">
                         <input type="text" class="topLabel">
-                        <label for="">Height (Cm)</label>
+                        <div class="field-name">Height (Cm)</div>
                       </div>
                       <div class="Field">
                         <input type="text" class="topLabel">
-                        <label for="">Weight (Kg)</label>
+                        <div class="field-name">Weight (Kg)</div>
                       </div>
                     </div>
 
@@ -395,20 +395,20 @@
               <div class="mySettings">
                 <div class="Field">
                   <input type="text" class="topLabel">
-                  <label>Username</label>
+                  <div class="field-name">Username</div>
                 </div>
                 <div class="Field">
                   <input type="text" class="topLabel">
-                  <label>New password</label>
+                  <div class="field-name">New password</div>
                 </div>
                 <div class="Field">
                   <input type="text" class="topLabel">
-                  <label>Confirm password</label>
+                  <div class="field-name">Confirm password</div>
                 </div>
 
                 <div class="Field-select">
-                  <label>Interface language</label>
-                  <select name="select2">
+                  <div class="field-name">Interface language</div>
+                  <select name="select2" class="select-single-nosearch">
                     <option value="">English</option>
                     <option value="Englsh">item select1</option>
                     <option value="Spanish">item select2</option>
@@ -426,7 +426,7 @@
               <div class="myNotification">
                 <div class="Field">
                   <input type="text" class="topLabel active" value="karlsmelyj@gmail.com">
-                  <label class="active">E-mail address</label>
+                  <label class="field-name active ">E-mail address</label>
                 </div>
                 <label class="checkB">
                   <input id="Agree" type="checkbox" name="checkbox" value="">
@@ -566,8 +566,8 @@
         <input type="text" placeholder="Username">
       </div>
       <div class="Field-select">
-        <label>Country</label>
-        <select name="select1" >
+        <div class="field-name">Country</dвшм>
+        <select name="select1" class="select-single-nosearch">
           <option value="">Choose from list</option>
           <option value="Englsh">list1</option>
           <option value="Spanish">Spanish</option>
@@ -575,8 +575,8 @@
         </select>
       </div>
       <div class="Field-select">
-        <label>What are you searching?</label>
-        <select name="select2">
+        <div class="field-name">What are you searching?</div>
+        <select name="select2"  class="select-single-nosearch">
           <option value="">Choose from list</option>
           <option value="Englsh">Englsh</option>
           <option value="Spanish">Spanish</option>
@@ -584,8 +584,8 @@
         </select>
       </div>
       <div class="Field-select">
-        <label>Order by</label>
-        <select name="select3" >
+        <div class="field-name">Order by</div>
+        <select name="select3" class="select-single-nosearch">
           <option value="">Newest</option>
           <option value="Englsh">Englsh</option>
           <option value="Spanish">Spanish</option>
@@ -663,6 +663,8 @@
 <script src="js/jquery.bpopup.js"></script>
 <script src="js/fancybox.umd.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="js/slimselect.min.js"></script>
+
 <script src="js/main.js"></script>
 
 
