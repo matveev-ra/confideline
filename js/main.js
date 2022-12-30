@@ -428,5 +428,15 @@ $('.Hidden-title span').click(function (e) {
       }
     })
   });
+  $(".select-single-search").each((i, e) => {
+    new SlimSelect({
+      select: e,
+      settings: {
+        placeholderText: 'Choose from list',
+        showSearch: true
+        
+      }
+    })
+  });
 
 

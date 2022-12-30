@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="styles/fancybox.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/fancybox.css" type="text/css"/>
 	<link rel="stylesheet" href="styles/slick.css" type="text/css"/>
+  <link rel="stylesheet" href="styles/slimselect.css" type="text/css"/>
 
 
  
@@ -432,8 +433,8 @@
     </div>
     <div class="Filtr-field">
       <div class="Field-select">
-        <label>Country</label>
-        <select name="select1" >
+        <div class="field-name">Country</div>
+        <select name="select1" class="select-single-search">
           <option value="">Choose from list</option>
           <option value="Englsh">list1</option>
           <option value="Spanish">Spanish</option>
@@ -441,8 +442,8 @@
         </select>
       </div>
       <div class="Field-select">
-        <label>What are you searching?</label>
-        <select name="select2">
+        <div class="field-name">What are you searching?</div>
+        <select name="select2" class="select-single-search">
           <option value="">Choose from list</option>
           <option value="Englsh">Englsh</option>
           <option value="Spanish">Spanish</option>
@@ -470,69 +471,7 @@
 </div>
 <!-- /MODAL /////////////////////////////////////////////////////-->
 
-<!--MODAL //////////////////  - форма  ////////////////////-->
-<div class="Modal Modal-white" id="ModalTraslateVoice" style=" display: none;">
-  <div class="Modalclose close">&#215;</div>
-  <div class="Modal-white__wrap">
-    <div class="Modal-white__hd"> Translate voice message</div>
 
-    <div class="WordCount">
-      <div class="WordCount__item">
-        <div class="WordCount__item-text">Balance <a href="">(Пополнить баланс)</a></div>
-        <div class="WordCount__item-numb">€123.21</div>
-      </div>
-      <div class="WordCount__item">
-        <div class="WordCount__item-text">Your personat discount</div>
-        <div class="WordCount__item-numb">0%</div>
-      </div>
-      <div class="WordCount__item">
-        <div class="WordCount__item-text">Message length <a href="">(Стоимость)</a></div>
-        <div class="WordCount__item-numb">86 seconds</div>
-      </div>
-      <div class="WordCount__item">
-        <div class="WordCount__item-text">Type of translation</div>
-        <div class="WordCount__item-numb">Basic</div>
-      </div>
-    </div>
-    <div class="Filtr-field">
-      <div class="Field-select">
-        <label>Country</label>
-        <select name="select1" >
-          <option value="">Choose from list</option>
-          <option value="Englsh">list1</option>
-          <option value="Spanish">Spanish</option>
-          <option value="German">German</option>
-        </select>
-      </div>
-      <div class="Field-select">
-        <label>What are you searching?</label>
-        <select name="select2">
-          <option value="">Choose from list</option>
-          <option value="Englsh">Englsh</option>
-          <option value="Spanish">Spanish</option>
-          <option value="German">German</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="Price-translate">
-      <div class="text">Price </div>
-      <div class="numb">€3.21</div>
-    </div>
-    <div class="Agree">
-      <label class="checkB">
-        <input id="Agree" type="checkbox" name="checkbox" value="">
-        <div class="checkB__text"><span>I'd like to receive the translated letters of this member automatically</span></div>
-      </label>
-    </div>
-
-    <button class="btn">translate</button>
-    
-  </div>
- 
- 
-</div>
-<!-- /MODAL /////////////////////////////////////////////////////-->
 
 
 
@@ -546,6 +485,7 @@
 <script src="js/fancybox.umd.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/slimselect.min.js"></script>
 <script src="js/main.js"></script>
 
 
